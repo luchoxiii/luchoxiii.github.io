@@ -6,32 +6,179 @@
   <title>Lucho | Data Science Engineer</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
+    :root {
+      --bg: #020617;
+      --card: rgba(15,23,42,0.65);
+      --border: rgba(148,163,184,0.15);
+      --text: #e2e8f0;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.15);
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
     }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(56,189,248,0.12), transparent 40%),
+        radial-gradient(circle at 80% 0%, rgba(59,130,246,0.12), transparent 40%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      letter-spacing: .2px;
+    }
+
     header, main, footer {
-      max-width: 900px;
+      max-width: 980px;
       margin: auto;
-      padding: 20px;
+      padding: 28px 20px;
     }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      background: linear-gradient(90deg,#38bdf8,#818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #role {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    main {
+      display: grid;
+      gap: 20px;
+    }
+
+    section {
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      padding: 22px;
+      border-radius: 18px;
+      transition: all .25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg,transparent,rgba(56,189,248,0.08),transparent);
+      opacity: 0;
+      transition: opacity .25s ease;
+    }
+
+    section:hover::before {
+      opacity: 1;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56,189,248,0.35);
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media(min-width:768px){
+      .grid-2{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
     select {
-      padding: 5px;
-      border-radius: 5px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(15,23,42,.8);
+      color: var(--text);
+      cursor: pointer;
+      transition:.2s;
     }
-    h1, h2 {
-      color: #38bdf8;
+
+    select:hover{
+      border-color:var(--accent);
     }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      opacity:.8;
+    }
+
+    .github-box{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:12px;
+      background:var(--accent-soft);
+      width:fit-content;
+      margin-top:10px;
+      font-size:.95rem;
+      border:1px solid rgba(56,189,248,0.25);
+    }
+
+    footer {
+      text-align: center;
+      font-size: .85rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      margin:4px;
+      border-radius:8px;
+      background:rgba(56,189,248,0.12);
+      font-size:.8rem;
+      border:1px solid rgba(56,189,248,0.2);
+    }
+
   </style>
 </head>
 
 <body>
   <header>
-    <h1 id="name">Lucho</h1>
-    <p id="role">Ingeniero en Ciencia de Datos</p>
+    <div class="hero">
+      <h1 id="name">Lucho</h1>
+      <p id="role">Ingeniero en Ciencia de Datos</p>
+    </div>
 
     <select id="languageSelector">
       <option value="es">Español</option>
@@ -42,23 +189,48 @@
   </header>
 
   <main>
+
     <section>
       <h2 id="aboutTitle">Sobre mí</h2>
       <p id="aboutText">
-        Especializado en análisis de datos, machine learning y visualización.
+        Especializado en análisis de datos, machine learning y visualización con enfoque en resolver problemas reales mediante modelos predictivos y análisis exploratorio.
       </p>
+
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">SQL</span>
+        <span class="tag">DataViz</span>
+      </div>
     </section>
 
-    <section>
-      <h2 id="projectsTitle">Proyectos</h2>
-      <p id="projectsText">
-        Próximamente proyectos destacados.
-      </p>
-    </section>
+    <div class="grid-2">
+
+      <section>
+        <h2 id="projectsTitle">Proyectos</h2>
+        <p id="projectsText">
+          Próximamente portfolio de modelos de ML, dashboards analíticos y pipelines de datos.
+        </p>
+      </section>
+
+      <section>
+        <h2>GitHub</h2>
+        <p>
+          Explorá mis repositorios públicos:
+        </p>
+
+        <a class="github-box" href="https://github.com/luchoxiii" target="_blank">
+          github.com/luchoxiii
+        </a>
+      </section>
+
+    </div>
+
   </main>
 
   <footer>
-    <p>© 2026 Lucho</p>
+    <p id="copyright"></p>
   </footer>
 
   <script>
@@ -66,30 +238,30 @@
       es: {
         role: "Ingeniero en Ciencia de Datos",
         aboutTitle: "Sobre mí",
-        aboutText: "Especializado en análisis de datos, machine learning y visualización.",
+        aboutText: "Especializado en análisis de datos, machine learning y visualización con enfoque en resolver problemas reales mediante modelos predictivos y análisis exploratorio.",
         projectsTitle: "Proyectos",
-        projectsText: "Próximamente proyectos destacados."
+        projectsText: "Próximamente portfolio de modelos de ML, dashboards analíticos y pipelines de datos."
       },
       en: {
         role: "Data Science Engineer",
         aboutTitle: "About Me",
-        aboutText: "Specialized in data analysis, machine learning and visualization.",
+        aboutText: "Focused on solving real problems using machine learning models, data pipelines and analytical dashboards.",
         projectsTitle: "Projects",
-        projectsText: "Featured projects coming soon."
+        projectsText: "Upcoming portfolio with ML models, dashboards and data pipelines."
       },
       pt: {
         role: "Engenheiro de Ciência de Dados",
         aboutTitle: "Sobre mim",
-        aboutText: "Especializado em análise de dados, machine learning e visualização.",
+        aboutText: "Focado em resolver problemas reais utilizando modelos de machine learning e análise exploratória.",
         projectsTitle: "Projetos",
-        projectsText: "Projetos em destaque em breve."
+        projectsText: "Portfolio em breve com modelos ML e dashboards analíticos."
       },
       fr: {
         role: "Ingénieur en Data Science",
         aboutTitle: "À propos de moi",
-        aboutText: "Spécialisé en analyse de données, machine learning et visualisation.",
+        aboutText: "Spécialisé dans la résolution de problèmes réels avec machine learning et analyse de données.",
         projectsTitle: "Projets",
-        projectsText: "Projets à venir prochainement."
+        projectsText: "Portfolio à venir avec modèles ML et dashboards analytiques."
       }
     };
 
@@ -107,6 +279,9 @@
 
       document.documentElement.lang = lang;
     });
+
+    const year = new Date().getFullYear();
+    document.getElementById("copyright").textContent = `© 2020 - ${year} Lucho`;
   </script>
 </body>
 </html>
