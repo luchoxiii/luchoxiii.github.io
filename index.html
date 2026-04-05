@@ -1,8 +1,112 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
 <head>
-  <title>Lucho | Ingeniero en Ciencia de Datos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucho | Data Science Engineer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin: 0;
+      padding: 0;
+    }
+    header, main, footer {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    select {
+      padding: 5px;
+      border-radius: 5px;
+    }
+    h1, h2 {
+      color: #38bdf8;
+    }
+  </style>
 </head>
+
+<body>
+  <header>
+    <h1 id="name">Lucho</h1>
+    <p id="role">Ingeniero en Ciencia de Datos</p>
+
+    <select id="languageSelector">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="pt">Português</option>
+      <option value="fr">Français</option>
+    </select>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="aboutTitle">Sobre mí</h2>
+      <p id="aboutText">
+        Especializado en análisis de datos, machine learning y visualización.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="projectsTitle">Proyectos</h2>
+      <p id="projectsText">
+        Próximamente proyectos destacados.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Lucho</p>
+  </footer>
+
+  <script>
+    const content = {
+      es: {
+        role: "Ingeniero en Ciencia de Datos",
+        aboutTitle: "Sobre mí",
+        aboutText: "Especializado en análisis de datos, machine learning y visualización.",
+        projectsTitle: "Proyectos",
+        projectsText: "Próximamente proyectos destacados."
+      },
+      en: {
+        role: "Data Science Engineer",
+        aboutTitle: "About Me",
+        aboutText: "Specialized in data analysis, machine learning and visualization.",
+        projectsTitle: "Projects",
+        projectsText: "Featured projects coming soon."
+      },
+      pt: {
+        role: "Engenheiro de Ciência de Dados",
+        aboutTitle: "Sobre mim",
+        aboutText: "Especializado em análise de dados, machine learning e visualização.",
+        projectsTitle: "Projetos",
+        projectsText: "Projetos em destaque em breve."
+      },
+      fr: {
+        role: "Ingénieur en Data Science",
+        aboutTitle: "À propos de moi",
+        aboutText: "Spécialisé en analyse de données, machine learning et visualisation.",
+        projectsTitle: "Projets",
+        projectsText: "Projets à venir prochainement."
+      }
+    };
+
+    const selector = document.getElementById("languageSelector");
+
+    selector.addEventListener("change", (e) => {
+      const lang = e.target.value;
+      const data = content[lang];
+
+      document.getElementById("role").textContent = data.role;
+      document.getElementById("aboutTitle").textContent = data.aboutTitle;
+      document.getElementById("aboutText").textContent = data.aboutText;
+      document.getElementById("projectsTitle").textContent = data.projectsTitle;
+      document.getElementById("projectsText").textContent = data.projectsText;
+
+      document.documentElement.lang = lang;
+    });
+  </script>
 </body>
-  </body>
 </html>
