@@ -47,6 +47,16 @@
 ]
 }
 </script>
+
+<!-- Google Analytics 4 — Reemplazá G-XXXXXXXXXX con tu Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+
 <style>
 :root{
 --bg:#ffffff;
@@ -111,6 +121,7 @@ font-size:.9rem;
 position:relative;
 padding-bottom:6px;
 transition:color .2s;
+cursor:pointer;
 }
 .nav a::after{
 content:"";
@@ -154,6 +165,7 @@ border-radius:16px;
 border:1px solid var(--border);
 backdrop-filter:blur(10px);
 transition:.25s;
+scroll-margin-top:100px;
 }
 section:hover{
 transform:translateY(-3px);
@@ -224,17 +236,6 @@ padding:30px 10px;
 color:var(--muted);
 font-size:.8rem;
 }
-.visually-hidden{
-position:absolute;
-width:1px;
-height:1px;
-padding:0;
-margin:-1px;
-overflow:hidden;
-clip:rect(0,0,0,0);
-white-space:nowrap;
-border-width:0;
-}
 </style>
 <base target="_blank">
 </head>
@@ -258,13 +259,13 @@ border-width:0;
 </div>
 </div>
 <nav class="nav" aria-label="Navegación principal">
-<a href="#about" id="navAbout">Sobre mí</a>
-<a href="#certificaciones" id="navCert">Certificaciones</a>
-<a href="#projects" id="navProjects">Proyectos</a>
-<a href="#resources" id="navResources">Recursos</a>
-<a href="#github" id="navGithub">GitHub</a>
-<a href="#contact" id="navContact">Contacto</a>
-<a href="#support" id="navSupport">Contribuciones</a>
+<a data-scroll="#about" id="navAbout">Sobre mí</a>
+<a data-scroll="#certificaciones" id="navCert">Certificaciones</a>
+<a data-scroll="#projects" id="navProjects">Proyectos</a>
+<a data-scroll="#resources" id="navResources">Recursos</a>
+<a data-scroll="#github" id="navGithub">GitHub</a>
+<a data-scroll="#contact" id="navContact">Contacto</a>
+<a data-scroll="#support" id="navSupport">Contribuciones</a>
 </nav>
 </header>
 <main>
@@ -318,9 +319,9 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <h2 id="certTitle">Certificaciones</h2>
 <p id="certText">Certificaciones verificables para reclutadores.</p>
 <div class="cert-grid">
-<a class="github" href="#" target="_blank" rel="noopener noreferrer">Google Data Analytics (próximamente)</a>
-<a class="github" href="#" target="_blank" rel="noopener noreferrer">Machine Learning Specialization (próximamente)</a>
-<a class="github" href="#" target="_blank" rel="noopener noreferrer">Deep Learning (próximamente)</a>
+<a class="github" href="#">Google Data Analytics (próximamente)</a>
+<a class="github" href="#">Machine Learning Specialization (próximamente)</a>
+<a class="github" href="#">Deep Learning (próximamente)</a>
 </div>
 </section>
 <section id="projects">
@@ -337,7 +338,7 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <section id="resources">
 <h2 id="resourcesTitle">Recursos para alumnos</h2>
 <p id="resourcesText">Material educativo, guías y notebooks disponibles en GitHub.</p>
-<a class="github" href="https://github.com/luchoxiii/Students" target="_blank" rel="noopener noreferrer">Ver recursos</a>
+<a class="github" href="https://github.com/luchoxiii/Students/tree/main">Ver recursos</a>
 </section>
 <section id="contact">
 <h2 id="contactTitle">Contacto profesional</h2>
@@ -349,12 +350,12 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <section id="support">
 <h2 id="supportTitle">Contribuciones o donaciones</h2>
 <p id="supportText">Si mi contenido o proyectos te ayudan, podés apoyar el desarrollo de nuevos recursos.</p>
-<a class="github" href="#" target="_blank" rel="noopener noreferrer">Donar</a>
+<a class="github" href="#">Donar</a>
 </section>
 <section id="github">
 <h2 id="githubTitle">GitHub</h2>
 <p id="githubText">Explorá mis repositorios públicos:</p>
-<a class="github" href="https://github.com/luchoxiii" target="_blank" rel="noopener noreferrer">github.com/luchoxiii</a>
+<a class="github" href="https://github.com/luchoxiii">github.com/luchoxiii</a>
 </section>
 </div>
 </main>
@@ -462,7 +463,7 @@ certTitle:"Certificações",
 certText:"Certificações verificáveis em Data Science, Machine Learning e Cloud.",
 projectsTitle:"Projetos",
 projectsText:"Projetos profissionais em breve.",
-resourcesTitle:"Recursos para alunos",
+resourcesTitle:"Recursos para alumnos",
 resourcesText:"Material educativo, guias e notebooks disponíveis no GitHub.",
 githubTitle:"GitHub",
 githubText:"Explore meus repositórios",
@@ -605,6 +606,19 @@ updateContent(e.target.value)
 themeBtn.onclick=()=>{
 document.body.classList.toggle("dark")
 }
+
+// Smooth scroll para navegación interna sin recargar ni abrir nuevas pestañas
+document.querySelectorAll('.nav a[data-scroll]').forEach(link=>{
+link.addEventListener('click',e=>{
+e.preventDefault()
+const targetId=link.getAttribute('data-scroll')
+const target=document.querySelector(targetId)
+if(target){
+target.scrollIntoView({behavior:'smooth',block:'start'})
+history.pushState(null,null,targetId)
+}
+})
+})
 
 const year=new Date().getFullYear()
 document.getElementById("copyright").textContent=`© 2020 - ${year} Lucho`
