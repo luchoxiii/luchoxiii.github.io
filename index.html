@@ -12,11 +12,19 @@
 <meta property="og:title" content="Lucho | Data Science Engineer | Machine Learning | MLOps">
 <meta property="og:description" content="Data Science Engineer con 6+ años de experiencia en Machine Learning, Data Engineering, BI y analítica avanzada. Especializado en modelos predictivos, automatización, pipelines de datos, agentes de IA, MLOps y optimización de procesos.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://luchoxiii.github.io/">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lucho | Data Science Engineer | Machine Learning | MLOps">
 <meta name="twitter:description" content="Data Science Engineer con 6+ años de experiencia en Machine Learning, Data Engineering, BI y analítica avanzada.">
-<link rel="canonical" href="https://github.com/luchoxiii">
+<link rel="canonical" href="https://luchoxiii.github.io/">
+<link rel="alternate" hreflang="es" href="https://luchoxiii.github.io/?lang=es">
+<link rel="alternate" hreflang="en" href="https://luchoxiii.github.io/?lang=en">
+<link rel="alternate" hreflang="pt" href="https://luchoxiii.github.io/?lang=pt">
+<link rel="alternate" hreflang="fr" href="https://luchoxiii.github.io/?lang=fr">
+<link rel="alternate" hreflang="it" href="https://luchoxiii.github.io/?lang=it">
+<link rel="alternate" hreflang="de" href="https://luchoxiii.github.io/?lang=de">
+<link rel="alternate" hreflang="x-default" href="https://luchoxiii.github.io/">
 <script type="application/ld+json">
 {
 "@context":"https://schema.org",
@@ -230,6 +238,34 @@ display:grid;
 gap:12px;
 margin-top:10px;
 }
+.portfolio-grid,.support-grid{
+display:grid;
+gap:14px;
+margin-top:14px;
+}
+@media(min-width:700px){
+.portfolio-grid,.support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+.portfolio-card,.support-card{
+border:1px solid var(--border);
+border-radius:12px;
+padding:16px;
+background:rgba(56,189,248,.05);
+}
+.portfolio-card h3,.support-card h3{font-size:1rem;margin-bottom:6px}
+.portfolio-card p,.support-card p{color:var(--muted);font-size:.9rem}
+.poster-preview{
+display:block;
+width:100%;
+max-height:420px;
+object-fit:contain;
+border-radius:10px;
+margin:12px 0;
+background:var(--bg);
+border:1px solid var(--border);
+}
+.is-hidden{display:none!important}
+.support-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
 footer{
 text-align:center;
 padding:30px 10px;
@@ -261,6 +297,7 @@ font-size:.8rem;
 <nav class="nav" aria-label="Navegación principal">
 <a data-scroll="#about" id="navAbout">Sobre mí</a>
 <a data-scroll="#certificaciones" id="navCert">Certificaciones</a>
+<a data-scroll="#featured" id="navFeatured">Destacados</a>
 <a data-scroll="#projects" id="navProjects">Proyectos</a>
 <a data-scroll="#resources" id="navResources">Recursos</a>
 <a data-scroll="#github" id="navGithub">GitHub</a>
@@ -335,6 +372,23 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <span class="tag">AI Agents</span>
 </div>
 </section>
+<section id="featured">
+<h2 id="featuredTitle">Trabajo destacado</h2>
+<p id="featuredText">Una selección de publicaciones, pósters y casos de estudio.</p>
+<div class="portfolio-grid">
+<article class="portfolio-card">
+<h3 id="posterTitle">Póster científico</h3>
+<p id="posterText">Publicación científica sobre análisis y ciencia de datos.</p>
+<img id="posterImage" class="poster-preview is-hidden" src="" alt="Póster científico de Lucho" loading="lazy">
+<a id="posterLink" class="github is-hidden" href="">Ver póster</a>
+<p id="posterMissing" style="margin-top:12px;font-size:.85rem">Próximamente disponible.</p>
+</article>
+<article class="portfolio-card">
+<h3 id="caseStudyTitle">Casos de estudio</h3>
+<p id="caseStudyText">Acá voy a compartir proyectos aplicados, métodos y resultados reproducibles.</p>
+</article>
+</div>
+</section>
 <section id="resources">
 <h2 id="resourcesTitle">Recursos para alumnos</h2>
 <p id="resourcesText">Material educativo, guías y notebooks disponibles en GitHub.</p>
@@ -350,7 +404,19 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <section id="support">
 <h2 id="supportTitle">Contribuciones o donaciones</h2>
 <p id="supportText">Si mi contenido o proyectos te ayudan, podés apoyar el desarrollo de nuevos recursos.</p>
-<a class="github" href="#">Donar</a>
+<div class="support-grid">
+<article id="paypalCard" class="support-card">
+<h3>PayPal</h3>
+<p id="paypalText">Donación internacional segura.</p>
+<a id="paypalLink" class="github is-hidden" href="">Donar con PayPal</a>
+</article>
+<article id="localSupportCard" class="support-card">
+<h3 id="localSupportTitle">Apoyo local</h3>
+<p id="localSupportText">Plataforma local de donaciones.</p>
+<a id="localSupportLink" class="github is-hidden" href="">Apoyar el proyecto</a>
+</article>
+</div>
+<p id="supportMissing" style="margin-top:14px;font-size:.85rem;color:var(--muted)">Los enlaces de donación se habilitarán cuando se configure cada perfil.</p>
 </section>
 <section id="github">
 <h2 id="githubTitle">GitHub</h2>
@@ -366,10 +432,37 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 const selector=document.getElementById("languageSelector")
 const themeBtn=document.getElementById("themeToggle")
 const metaDesc=document.querySelector('meta[name="description"]')
+const metaKeywords=document.querySelector('meta[name="keywords"]')
 const metaOgDesc=document.querySelector('meta[property="og:description"]')
 const metaTwitterDesc=document.querySelector('meta[name="twitter:description"]')
+const metaOgTitle=document.querySelector('meta[property="og:title"]')
+const metaTwitterTitle=document.querySelector('meta[name="twitter:title"]')
 const metaOgLocale=document.querySelector('meta[property="og:locale"]')
+const metaOgUrl=document.querySelector('meta[property="og:url"]')
+const canonicalLink=document.querySelector('link[rel="canonical"]')
 const htmlTag=document.documentElement
+
+// Configuración centralizada: pegá aquí las URLs reales cuando estén disponibles.
+const portfolioConfig={
+poster:{
+imageUrl:"assets/poster-tbc-sadi-op3.jpg",
+projectUrl:"assets/poster-tbc-sadi-op3.pdf"
+},
+donations:{
+paypalUrl:"", // Ejemplo: "https://www.paypal.com/donate/?hosted_button_id=..."
+localUrl:"https://ko-fi.com/luchoxiii",
+localPlatform:"Ko-fi"
+}
+}
+
+const extras={
+es:{navFeatured:"Destacados",featuredTitle:"Trabajo destacado",featuredText:"Una selección de publicaciones, pósters y casos de estudio.",posterTitle:"Mortalidad intrahospitalaria en pacientes con VIH y tuberculosis",posterText:"Análisis de factores asociados. Póster científico presentado junto al equipo del Hospital Posadas y SADI.",posterLink:"Ver póster completo",posterMissing:"Próximamente disponible.",caseStudyTitle:"Casos de estudio",caseStudyText:"Acá voy a compartir proyectos aplicados, métodos y resultados reproducibles.",paypalText:"Donación internacional segura.",paypalLink:"Donar con PayPal",localSupportTitle:"Ko-fi",localSupportText:"Podés colaborar con el desarrollo de nuevos recursos y proyectos.",localSupportLink:"Invitarme un café",supportMissing:"Los enlaces de donación se habilitarán cuando se configure cada perfil."},
+en:{navFeatured:"Featured",featuredTitle:"Featured work",featuredText:"A selection of publications, posters and case studies.",posterTitle:"In-hospital mortality in patients with HIV and tuberculosis",posterText:"Analysis of associated factors. Scientific poster presented with the Hospital Posadas and SADI team.",posterLink:"View full poster",posterMissing:"Coming soon.",caseStudyTitle:"Case studies",caseStudyText:"I will share applied projects, methods and reproducible results here.",paypalText:"Secure international donation.",paypalLink:"Donate with PayPal",localSupportTitle:"Ko-fi",localSupportText:"You can support the development of new resources and projects.",localSupportLink:"Buy me a coffee",supportMissing:"Donation links will be enabled once each profile is configured."},
+pt:{navFeatured:"Destaques",featuredTitle:"Trabalho em destaque",featuredText:"Uma seleção de publicações, pôsteres e estudos de caso.",posterTitle:"Pôster científico",posterText:"Publicação científica sobre análise e ciência de dados.",posterLink:"Ver pôster",posterMissing:"Em breve.",caseStudyTitle:"Estudos de caso",caseStudyText:"Vou compartilhar aqui projetos aplicados, métodos e resultados reproduzíveis.",paypalText:"Doação internacional segura.",localSupportTitle:"Apoio local",localSupportText:"Plataforma local de doações.",localSupportLink:"Apoiar o projeto",supportMissing:"Os links de doação serão ativados quando cada perfil for configurado."},
+fr:{navFeatured:"À la une",featuredTitle:"Travail à la une",featuredText:"Une sélection de publications, affiches et études de cas.",posterTitle:"Affiche scientifique",posterText:"Publication scientifique sur l'analyse et la science des données.",posterLink:"Voir l'affiche",posterMissing:"Bientôt disponible.",caseStudyTitle:"Études de cas",caseStudyText:"Je partagerai ici des projets appliqués, des méthodes et des résultats reproductibles.",paypalText:"Don international sécurisé.",paypalLink:"Faire un don avec PayPal",localSupportTitle:"Soutien local",localSupportText:"Plateforme locale de dons.",localSupportLink:"Soutenir le projet",supportMissing:"Les liens de don seront activés lorsque chaque profil sera configuré."},
+it:{navFeatured:"In evidenza",featuredTitle:"Lavoro in evidenza",featuredText:"Una selezione di pubblicazioni, poster e casi di studio.",posterTitle:"Poster scientifico",posterText:"Pubblicazione scientifica su analisi e scienza dei dati.",posterLink:"Vedi il poster",posterMissing:"Prossimamente.",caseStudyTitle:"Casi di studio",caseStudyText:"Condividerò qui progetti applicati, metodi e risultati riproducibili.",paypalText:"Donazione internazionale sicura.",localSupportTitle:"Supporto locale",localSupportText:"Piattaforma locale per donazioni.",localSupportLink:"Sostieni il progetto",supportMissing:"I link per le donazioni saranno attivati quando ogni profilo sarà configurato."},
+de:{navFeatured:"Highlights",featuredTitle:"Ausgewählte Arbeit",featuredText:"Eine Auswahl an Veröffentlichungen, Postern und Fallstudien.",posterTitle:"Wissenschaftliches Poster",posterText:"Wissenschaftliche Veröffentlichung über Datenanalyse und Data Science.",posterLink:"Poster ansehen",posterMissing:"Demnächst verfügbar.",caseStudyTitle:"Fallstudien",caseStudyText:"Hier teile ich angewandte Projekte, Methoden und reproduzierbare Ergebnisse.",paypalText:"Sichere internationale Spende.",localSupportTitle:"Lokale Unterstützung",localSupportText:"Lokale Spendenplattform.",localSupportLink:"Projekt unterstützen",supportMissing:"Spendenlinks werden aktiviert, sobald jedes Profil eingerichtet ist."}
+}
 
 const content={
 es:{
@@ -586,6 +679,9 @@ document.title=d.title
 if(metaDesc)metaDesc.content=d.description
 if(metaOgDesc)metaOgDesc.content=d.description
 if(metaTwitterDesc)metaTwitterDesc.content=d.description
+if(metaKeywords)metaKeywords.content=`${d.title}, Data Science, Machine Learning, MLOps, Data Engineering, Python, SQL, Portfolio`
+if(metaOgTitle)metaOgTitle.content=d.title
+if(metaTwitterTitle)metaTwitterTitle.content=d.title
 if(metaOgLocale){
 const locales={es:"es_ES",en:"en_US",pt:"pt_BR",fr:"fr_FR",it:"it_IT",de:"de_DE"}
 metaOgLocale.content=locales[lang]||"es_ES"
@@ -596,12 +692,69 @@ let el=document.getElementById(k)
 if(el){
 el.textContent=d[k]
 }
+const e=extras[lang]
+for(let k in e){
+const el=document.getElementById(k)
+if(el)el.textContent=e[k]
+}
+renderConfiguredItems(e)
+updateLanguageUrl(lang)
+}
+
+function renderConfiguredItems(e){
+const poster=portfolioConfig.poster
+const posterImage=document.getElementById("posterImage")
+const posterLink=document.getElementById("posterLink")
+const posterMissing=document.getElementById("posterMissing")
+if(poster.imageUrl){
+posterImage.src=poster.imageUrl
+posterImage.classList.remove("is-hidden")
+}else posterImage.classList.add("is-hidden")
+if(poster.projectUrl){
+posterLink.href=poster.projectUrl
+posterLink.classList.remove("is-hidden")
+}else posterLink.classList.add("is-hidden")
+posterMissing.classList.toggle("is-hidden",Boolean(poster.imageUrl||poster.projectUrl))
+
+const paypalLink=document.getElementById("paypalLink")
+const localLink=document.getElementById("localSupportLink")
+const paypalCard=document.getElementById("paypalCard")
+const localSupportCard=document.getElementById("localSupportCard")
+document.getElementById("localSupportTitle").textContent=portfolioConfig.donations.localPlatform
+paypalCard.classList.toggle("is-hidden",!portfolioConfig.donations.paypalUrl)
+localSupportCard.classList.toggle("is-hidden",!portfolioConfig.donations.localUrl)
+if(portfolioConfig.donations.paypalUrl){
+paypalLink.href=portfolioConfig.donations.paypalUrl
+paypalLink.classList.remove("is-hidden")
+}else paypalLink.classList.add("is-hidden")
+if(portfolioConfig.donations.localUrl){
+localLink.href=portfolioConfig.donations.localUrl
+localLink.classList.remove("is-hidden")
+}else localLink.classList.add("is-hidden")
+document.getElementById("supportMissing").classList.toggle("is-hidden",Boolean(portfolioConfig.donations.paypalUrl||portfolioConfig.donations.localUrl))
+}
+
+function updateLanguageUrl(lang){
+const url=new URL(window.location.href)
+if(lang==="es")url.searchParams.delete("lang")
+else url.searchParams.set("lang",lang)
+const href=url.toString()
+history.replaceState(null,"",href)
+if(canonicalLink)canonicalLink.href=href
+if(metaOgUrl)metaOgUrl.content=href
+localStorage.setItem("portfolio-language",lang)
 }
 }
 
 selector.addEventListener("change",e=>{
 updateContent(e.target.value)
 })
+
+const requestedLanguage=new URLSearchParams(window.location.search).get("lang")
+const savedLanguage=localStorage.getItem("portfolio-language")
+const initialLanguage=content[requestedLanguage]?requestedLanguage:(content[savedLanguage]?savedLanguage:"es")
+selector.value=initialLanguage
+updateContent(initialLanguage)
 
 themeBtn.onclick=()=>{
 document.body.classList.toggle("dark")
