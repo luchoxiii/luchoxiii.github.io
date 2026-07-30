@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lucho | Data Science Engineer | Machine Learning | MLOps | Portfolio</title>
-<meta name="description" content="Data Science Engineer con 6+ años de experiencia en Machine Learning, Data Engineering, BI y analítica avanzada. Especializado en modelos predictivos, automatización, pipelines de datos, agentes de IA, MLOps y optimización de procesos.">
+<meta name="description" content="Data Science Engineer con 6+ años de experiencia en Machine Learning, MLOps, Data Engineering y IA aplicada. Portfolio, proyectos y certificaciones.">
 <meta name="keywords" content="Data Science, Machine Learning, Deep Learning, MLOps, Data Engineering, Python, SQL, TensorFlow, PyTorch, Scikit-learn, Power BI, Tableau, Looker, Qlik, AWS, Azure, GCP, AI Safety, Data Governance, AI Agents, Portfolio, Data Scientist">
 <meta name="author" content="Lucho">
 <meta name="robots" content="index, follow">
@@ -13,10 +13,12 @@
 <meta property="og:description" content="Data Science Engineer con 6+ años de experiencia en Machine Learning, Data Engineering, BI y analítica avanzada. Especializado en modelos predictivos, automatización, pipelines de datos, agentes de IA, MLOps y optimización de procesos.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://luchoxiii.github.io/">
+<meta property="og:image" content="https://luchoxiii.github.io/foto.jpg">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lucho | Data Science Engineer | Machine Learning | MLOps">
 <meta name="twitter:description" content="Data Science Engineer con 6+ años de experiencia en Machine Learning, Data Engineering, BI y analítica avanzada.">
+<meta name="twitter:image" content="https://luchoxiii.github.io/foto.jpg">
 <link rel="canonical" href="https://luchoxiii.github.io/">
 <link rel="alternate" hreflang="es" href="https://luchoxiii.github.io/?lang=es">
 <link rel="alternate" hreflang="en" href="https://luchoxiii.github.io/?lang=en">
@@ -352,33 +354,58 @@ border:1px solid var(--border);
 .is-hidden{display:none!important}
 .support-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
 
-/* ---- Recursos + GitHub icon ---- */
-.resources-actions{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-align-items:center;
+/* ---- Especialidades / Cómo trabajo ---- */
+.specialties-grid{
+display:grid;
+gap:20px;
+}
+@media(min-width:900px){
+.specialties-grid{grid-template-columns:1fr 1fr}
+}
+.specialties-grid section{margin:0}
+/* ---- fin especialidades ---- */
+
+/* ---- Recursos (tarjetas GitHub) ---- */
+.resources-grid{
+display:grid;
+gap:14px;
 margin-top:14px;
 }
-.gh-icon-link{
-display:inline-flex;
+@media(min-width:700px){
+.resources-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+.resource-card{
+display:flex;
+gap:14px;
 align-items:center;
-justify-content:center;
+border:1px solid var(--border);
+border-radius:12px;
+padding:16px;
+background:rgba(56,189,248,.05);
+text-decoration:none;
+color:var(--text);
+transition:.2s;
+}
+.resource-card:hover{
+border-color:var(--accent);
+transform:translateY(-2px);
+box-shadow:0 8px 20px var(--shadow);
+}
+.resource-icon{
 width:44px;
 height:44px;
 border-radius:50%;
-background:var(--card);
+background:var(--bg);
 border:1px solid var(--border);
-color:var(--text);
-transition:.2s;
+display:flex;
+align-items:center;
+justify-content:center;
 flex-shrink:0;
+color:var(--text);
 }
-.gh-icon-link:hover{
-border-color:var(--accent);
-color:var(--accent);
-transform:translateY(-2px);
-}
-.gh-icon-link svg{width:22px;height:22px;fill:currentColor}
+.resource-icon svg{width:22px;height:22px;fill:currentColor}
+.resource-name{font-weight:600;font-size:.95rem;margin-bottom:2px}
+.resource-desc{color:var(--muted);font-size:.85rem}
 /* ---- fin recursos ---- */
 footer{
 text-align:center;
@@ -411,6 +438,8 @@ font-size:.8rem;
 </div>
 <nav class="nav" aria-label="Navegación principal">
 <a data-scroll="#about" id="navAbout">Sobre mí</a>
+<a data-scroll="#specialties" id="navSpecialties">Especialidades</a>
+<a data-scroll="#howiwork" id="navHowIWork">Cómo trabajo</a>
 <a data-scroll="#certificaciones" id="navCert">Certificaciones</a>
 <a data-scroll="#featured" id="navFeatured">Destacados</a>
 <a data-scroll="#projects" id="navProjects">Proyectos</a>
@@ -465,6 +494,52 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </div>
 </div>
 </section>
+<div class="specialties-grid">
+<section id="specialties">
+<h2 id="specialtiesTitle">Especialidades</h2>
+<p id="specialtiesText">Tecnología aplicada con una mirada de producto, reproducibilidad y uso responsable.</p>
+<div class="portfolio-grid">
+<article class="portfolio-card">
+<h3>Machine Learning &amp; Data</h3>
+<p>Modelos predictivos, analítica avanzada, Deep Learning y visualización para decisiones basadas en datos.</p>
+</article>
+<article class="portfolio-card">
+<h3>Generative AI &amp; LLMs</h3>
+<p>LLMs, agentes de IA, automatización, evaluación y diseño de flujos de trabajo asistidos por IA.</p>
+</article>
+<article class="portfolio-card">
+<h3>Data Engineering &amp; MLOps</h3>
+<p>Pipelines, procesos reproducibles, automatización, cloud y operación de soluciones de datos.</p>
+</article>
+<article class="portfolio-card">
+<h3>AI Safety &amp; Cybersecurity</h3>
+<p>Gobierno de datos e IA, calidad, seguridad y ciberseguridad aplicada a sistemas de inteligencia artificial.</p>
+</article>
+</div>
+</section>
+<section id="howiwork">
+<h2 id="howiworkTitle">Cómo trabajo</h2>
+<p id="howiworkText">Del problema y los datos a soluciones medibles, explicables y listas para usar.</p>
+<div class="portfolio-grid">
+<article class="portfolio-card">
+<h3>Modelos aplicados</h3>
+<p>Problemas de clasificación, predicción y análisis estadístico con métricas y resultados comunicables.</p>
+</article>
+<article class="portfolio-card">
+<h3>Automatización y pipelines</h3>
+<p>Flujos de datos reproducibles que reducen tareas manuales y mejoran la trazabilidad.</p>
+</article>
+<article class="portfolio-card">
+<h3>Evaluación y métricas</h3>
+<p>Seguimiento de calidad y desempeño de modelos con métricas claras, trazables y comunicables a negocio.</p>
+</article>
+<article class="portfolio-card">
+<h3>Documentación y entrega</h3>
+<p>Entregables claros, documentados y listos para producción, pensados para que el equipo los pueda mantener.</p>
+</article>
+</div>
+</section>
+</div>
 <div class="main-grid">
 <section id="certificaciones">
 <h2 id="certTitle">Certificaciones</h2>
@@ -504,10 +579,24 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <section id="resources">
 <h2 id="resourcesTitle">Recursos para alumnos</h2>
 <p id="resourcesText">Material educativo, guías y notebooks disponibles en GitHub.</p>
-<div class="resources-actions">
-<a class="github" href="https://github.com/luchoxiii/Students/tree/main">Ver recursos</a>
-<a class="gh-icon-link" href="https://github.com/luchoxiii" aria-label="Perfil de GitHub" title="GitHub">
+<div class="resources-grid">
+<a class="resource-card" href="https://github.com/luchoxiii/Students/tree/main">
+<div class="resource-icon">
 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</div>
+<div class="resource-body">
+<div class="resource-name" id="resourceStudentsName">Repositorio para alumnos</div>
+<div class="resource-desc" id="resourceStudentsDesc">Notebooks, guías y ejercicios de Data Science y Machine Learning.</div>
+</div>
+</a>
+<a class="resource-card" href="https://github.com/luchoxiii">
+<div class="resource-icon">
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</div>
+<div class="resource-body">
+<div class="resource-name" id="resourceProfileName">Mi perfil de GitHub</div>
+<div class="resource-desc" id="resourceProfileDesc">Proyectos personales, experimentos y contribuciones públicas.</div>
+</div>
 </a>
 </div>
 </section>
@@ -576,6 +665,14 @@ name:"Microsoft Certified: Azure Fundamentals (AZ-900)",
 issuer:"Microsoft",
 date:"2024", // <- poné el mes/año real
 verifyUrl:"" // <- pegá acá tu link de Microsoft Learn / Credly
+},
+{
+id:"cybersecurity",
+logo:"🛡️",
+name:"Cybersecurity Certification", // <- reemplazá por el nombre exacto de tu cert
+issuer:"", // <- poné el emisor real (ej. Google, ISC2, CompTIA, etc.)
+date:"", // <- poné el mes/año real
+verifyUrl:"" // <- pegá acá tu link de verificación cuando la tengas
 }
 ]
 
