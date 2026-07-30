@@ -25,6 +25,7 @@
 <link rel="alternate" hreflang="it" href="https://luchoxiii.github.io/?lang=it">
 <link rel="alternate" hreflang="de" href="https://luchoxiii.github.io/?lang=de">
 <link rel="alternate" hreflang="x-default" href="https://luchoxiii.github.io/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='system-ui'%3EL%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
 "@context":"https://schema.org",
@@ -52,17 +53,31 @@
 "AI Safety",
 "Data Governance",
 "AI Agents"
+],
+"hasCredential":[
+{
+"@type":"EducationalOccupationalCredential",
+"credentialCategory":"certification",
+"name":"AWS Certified Cloud Practitioner",
+"recognizedBy":{"@type":"Organization","name":"Amazon Web Services"}
+},
+{
+"@type":"EducationalOccupationalCredential",
+"credentialCategory":"certification",
+"name":"Microsoft Certified: Azure Fundamentals (AZ-900)",
+"recognizedBy":{"@type":"Organization","name":"Microsoft"}
+}
 ]
 }
 </script>
 
-<!-- Google Analytics 4 — Reemplazá G-XXXXXXXXXX con tu Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-092CLCQ0SX"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
+gtag('config', 'G-092CLCQ0SX');
 </script>
 
 <style>
@@ -92,6 +107,17 @@ color:var(--text);
 transition:background .3s,color .3s;
 line-height:1.6;
 }
+.skip-link{
+position:absolute;
+left:-999px;
+top:auto;
+background:var(--accent);
+color:#fff;
+padding:10px 16px;
+border-radius:0 0 8px 0;
+z-index:1000;
+}
+.skip-link:focus{left:0;top:0}
 header{
 max-width:1100px;
 margin:auto;
@@ -233,11 +259,70 @@ border:1px solid rgba(56,189,248,.3);
 transition:.2s;
 }
 .github:hover{background:rgba(56,189,248,.25)}
+
+/* ---- Certificaciones ---- */
 .cert-grid{
 display:grid;
-gap:12px;
-margin-top:10px;
+gap:14px;
+margin-top:14px;
 }
+@media(min-width:700px){
+.cert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+.cert-card{
+display:flex;
+gap:14px;
+align-items:flex-start;
+border:1px solid var(--border);
+border-radius:12px;
+padding:16px;
+background:rgba(56,189,248,.05);
+transition:.2s;
+}
+.cert-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.cert-logo{
+width:48px;
+height:48px;
+border-radius:10px;
+flex-shrink:0;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.5rem;
+background:var(--bg);
+border:1px solid var(--border);
+}
+.cert-body{flex:1}
+.cert-name{font-weight:600;font-size:.95rem;margin-bottom:2px}
+.cert-issuer{color:var(--muted);font-size:.82rem;margin-bottom:2px}
+.cert-date{color:var(--muted);font-size:.78rem;margin-bottom:8px}
+.cert-verify{
+display:inline-block;
+font-size:.8rem;
+padding:5px 10px;
+border-radius:7px;
+background:rgba(56,189,248,.15);
+border:1px solid rgba(56,189,248,.3);
+color:var(--accent);
+text-decoration:none;
+transition:.2s;
+}
+.cert-verify:hover{background:rgba(56,189,248,.28)}
+.cert-soon{
+opacity:.6;
+}
+.cert-badge-soon{
+display:inline-block;
+font-size:.72rem;
+padding:2px 8px;
+border-radius:20px;
+background:rgba(148,163,184,.2);
+color:var(--muted);
+margin-left:6px;
+vertical-align:middle;
+}
+/* ---- fin certificaciones ---- */
+
 .portfolio-grid,.support-grid{
 display:grid;
 gap:14px;
@@ -266,6 +351,35 @@ border:1px solid var(--border);
 }
 .is-hidden{display:none!important}
 .support-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+
+/* ---- Recursos + GitHub icon ---- */
+.resources-actions{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+align-items:center;
+margin-top:14px;
+}
+.gh-icon-link{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:44px;
+height:44px;
+border-radius:50%;
+background:var(--card);
+border:1px solid var(--border);
+color:var(--text);
+transition:.2s;
+flex-shrink:0;
+}
+.gh-icon-link:hover{
+border-color:var(--accent);
+color:var(--accent);
+transform:translateY(-2px);
+}
+.gh-icon-link svg{width:22px;height:22px;fill:currentColor}
+/* ---- fin recursos ---- */
 footer{
 text-align:center;
 padding:30px 10px;
@@ -276,6 +390,7 @@ font-size:.8rem;
 <base target="_blank">
 </head>
 <body class="dark">
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
 <header>
 <div class="topbar">
 <div>
@@ -300,12 +415,11 @@ font-size:.8rem;
 <a data-scroll="#featured" id="navFeatured">Destacados</a>
 <a data-scroll="#projects" id="navProjects">Proyectos</a>
 <a data-scroll="#resources" id="navResources">Recursos</a>
-<a data-scroll="#github" id="navGithub">GitHub</a>
 <a data-scroll="#contact" id="navContact">Contacto</a>
 <a data-scroll="#support" id="navSupport">Contribuciones</a>
 </nav>
 </header>
-<main>
+<main id="main-content">
 <section id="about" class="hero-card">
 <div class="about-container">
 <img src="foto.jpg" alt="Foto de Lucho" class="avatar" loading="lazy">
@@ -355,10 +469,8 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <section id="certificaciones">
 <h2 id="certTitle">Certificaciones</h2>
 <p id="certText">Certificaciones verificables para reclutadores.</p>
-<div class="cert-grid">
-<a class="github" href="#">Google Data Analytics (próximamente)</a>
-<a class="github" href="#">Machine Learning Specialization (próximamente)</a>
-<a class="github" href="#">Deep Learning (próximamente)</a>
+<div class="cert-grid" id="certGrid">
+<!-- Las tarjetas se generan por JS desde certConfig, más abajo -->
 </div>
 </section>
 <section id="projects">
@@ -392,7 +504,12 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <section id="resources">
 <h2 id="resourcesTitle">Recursos para alumnos</h2>
 <p id="resourcesText">Material educativo, guías y notebooks disponibles en GitHub.</p>
+<div class="resources-actions">
 <a class="github" href="https://github.com/luchoxiii/Students/tree/main">Ver recursos</a>
+<a class="gh-icon-link" href="https://github.com/luchoxiii" aria-label="Perfil de GitHub" title="GitHub">
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+</div>
 </section>
 <section id="contact">
 <h2 id="contactTitle">Contacto profesional</h2>
@@ -418,11 +535,6 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </div>
 <p id="supportMissing" style="margin-top:14px;font-size:.85rem;color:var(--muted)">Los enlaces de donación se habilitarán cuando se configure cada perfil.</p>
 </section>
-<section id="github">
-<h2 id="githubTitle">GitHub</h2>
-<p id="githubText">Explorá mis repositorios públicos:</p>
-<a class="github" href="https://github.com/luchoxiii">github.com/luchoxiii</a>
-</section>
 </div>
 </main>
 <footer>
@@ -442,6 +554,31 @@ const metaOgUrl=document.querySelector('meta[property="og:url"]')
 const canonicalLink=document.querySelector('link[rel="canonical"]')
 const htmlTag=document.documentElement
 
+// ============================================================
+// CONFIGURACIÓN DE CERTIFICACIONES
+// Editá acá tus certs reales. "verifyUrl" es el link público de
+// verificación (Credly para AWS, Microsoft Learn para Azure).
+// Si dejás verifyUrl vacío, la tarjeta se muestra como "próximamente".
+// ============================================================
+const certConfig=[
+{
+id:"aws-ccp",
+logo:"☁️",
+name:"AWS Certified Cloud Practitioner",
+issuer:"Amazon Web Services",
+date:"2024", // <- poné el mes/año real, ej: "Marzo 2024"
+verifyUrl:"" // <- pegá acá tu link de Credly, ej: "https://www.credly.com/badges/xxxxxxxx"
+},
+{
+id:"az-900",
+logo:"🔷",
+name:"Microsoft Certified: Azure Fundamentals (AZ-900)",
+issuer:"Microsoft",
+date:"2024", // <- poné el mes/año real
+verifyUrl:"" // <- pegá acá tu link de Microsoft Learn / Credly
+}
+]
+
 // Configuración centralizada: pegá aquí las URLs reales cuando estén disponibles.
 const portfolioConfig={
 poster:{
@@ -456,12 +593,12 @@ localPlatform:"Ko-fi"
 }
 
 const extras={
-es:{navFeatured:"Destacados",featuredTitle:"Trabajo destacado",featuredText:"Una selección de publicaciones, pósters y casos de estudio.",posterTitle:"Mortalidad intrahospitalaria en pacientes con VIH y tuberculosis",posterText:"Análisis de factores asociados. Póster científico presentado junto al equipo del Hospital Posadas y SADI.",posterLink:"Ver póster completo",posterMissing:"Próximamente disponible.",caseStudyTitle:"Casos de estudio",caseStudyText:"Acá voy a compartir proyectos aplicados, métodos y resultados reproducibles.",paypalText:"Donación internacional segura.",paypalLink:"Donar con PayPal",localSupportTitle:"Ko-fi",localSupportText:"Podés colaborar con el desarrollo de nuevos recursos y proyectos.",localSupportLink:"Invitarme un café",supportMissing:"Los enlaces de donación se habilitarán cuando se configure cada perfil."},
-en:{navFeatured:"Featured",featuredTitle:"Featured work",featuredText:"A selection of publications, posters and case studies.",posterTitle:"In-hospital mortality in patients with HIV and tuberculosis",posterText:"Analysis of associated factors. Scientific poster presented with the Hospital Posadas and SADI team.",posterLink:"View full poster",posterMissing:"Coming soon.",caseStudyTitle:"Case studies",caseStudyText:"I will share applied projects, methods and reproducible results here.",paypalText:"Secure international donation.",paypalLink:"Donate with PayPal",localSupportTitle:"Ko-fi",localSupportText:"You can support the development of new resources and projects.",localSupportLink:"Buy me a coffee",supportMissing:"Donation links will be enabled once each profile is configured."},
-pt:{navFeatured:"Destaques",featuredTitle:"Trabalho em destaque",featuredText:"Uma seleção de publicações, pôsteres e estudos de caso.",posterTitle:"Pôster científico",posterText:"Publicação científica sobre análise e ciência de dados.",posterLink:"Ver pôster",posterMissing:"Em breve.",caseStudyTitle:"Estudos de caso",caseStudyText:"Vou compartilhar aqui projetos aplicados, métodos e resultados reproduzíveis.",paypalText:"Doação internacional segura.",localSupportTitle:"Apoio local",localSupportText:"Plataforma local de doações.",localSupportLink:"Apoiar o projeto",supportMissing:"Os links de doação serão ativados quando cada perfil for configurado."},
-fr:{navFeatured:"À la une",featuredTitle:"Travail à la une",featuredText:"Une sélection de publications, affiches et études de cas.",posterTitle:"Affiche scientifique",posterText:"Publication scientifique sur l'analyse et la science des données.",posterLink:"Voir l'affiche",posterMissing:"Bientôt disponible.",caseStudyTitle:"Études de cas",caseStudyText:"Je partagerai ici des projets appliqués, des méthodes et des résultats reproductibles.",paypalText:"Don international sécurisé.",paypalLink:"Faire un don avec PayPal",localSupportTitle:"Soutien local",localSupportText:"Plateforme locale de dons.",localSupportLink:"Soutenir le projet",supportMissing:"Les liens de don seront activés lorsque chaque profil sera configuré."},
-it:{navFeatured:"In evidenza",featuredTitle:"Lavoro in evidenza",featuredText:"Una selezione di pubblicazioni, poster e casi di studio.",posterTitle:"Poster scientifico",posterText:"Pubblicazione scientifica su analisi e scienza dei dati.",posterLink:"Vedi il poster",posterMissing:"Prossimamente.",caseStudyTitle:"Casi di studio",caseStudyText:"Condividerò qui progetti applicati, metodi e risultati riproducibili.",paypalText:"Donazione internazionale sicura.",localSupportTitle:"Supporto locale",localSupportText:"Piattaforma locale per donazioni.",localSupportLink:"Sostieni il progetto",supportMissing:"I link per le donazioni saranno attivati quando ogni profilo sarà configurato."},
-de:{navFeatured:"Highlights",featuredTitle:"Ausgewählte Arbeit",featuredText:"Eine Auswahl an Veröffentlichungen, Postern und Fallstudien.",posterTitle:"Wissenschaftliches Poster",posterText:"Wissenschaftliche Veröffentlichung über Datenanalyse und Data Science.",posterLink:"Poster ansehen",posterMissing:"Demnächst verfügbar.",caseStudyTitle:"Fallstudien",caseStudyText:"Hier teile ich angewandte Projekte, Methoden und reproduzierbare Ergebnisse.",paypalText:"Sichere internationale Spende.",localSupportTitle:"Lokale Unterstützung",localSupportText:"Lokale Spendenplattform.",localSupportLink:"Projekt unterstützen",supportMissing:"Spendenlinks werden aktiviert, sobald jedes Profil eingerichtet ist."}
+es:{navFeatured:"Destacados",featuredTitle:"Trabajo destacado",featuredText:"Una selección de publicaciones, pósters y casos de estudio.",posterTitle:"Mortalidad intrahospitalaria en pacientes con VIH y tuberculosis",posterText:"Análisis de factores asociados. Póster científico presentado junto al equipo del Hospital Posadas y SADI.",posterLink:"Ver póster completo",posterMissing:"Próximamente disponible.",caseStudyTitle:"Casos de estudio",caseStudyText:"Acá voy a compartir proyectos aplicados, métodos y resultados reproducibles.",paypalText:"Donación internacional segura.",paypalLink:"Donar con PayPal",localSupportTitle:"Ko-fi",localSupportText:"Podés colaborar con el desarrollo de nuevos recursos y proyectos.",localSupportLink:"Invitarme un café",supportMissing:"Los enlaces de donación se habilitarán cuando se configure cada perfil.",certVerify:"Verificar credencial",certSoon:"Emisión próxima"},
+en:{navFeatured:"Featured",featuredTitle:"Featured work",featuredText:"A selection of publications, posters and case studies.",posterTitle:"In-hospital mortality in patients with HIV and tuberculosis",posterText:"Analysis of associated factors. Scientific poster presented with the Hospital Posadas and SADI team.",posterLink:"View full poster",posterMissing:"Coming soon.",caseStudyTitle:"Case studies",caseStudyText:"I will share applied projects, methods and reproducible results here.",paypalText:"Secure international donation.",paypalLink:"Donate with PayPal",localSupportTitle:"Ko-fi",localSupportText:"You can support the development of new resources and projects.",localSupportLink:"Buy me a coffee",supportMissing:"Donation links will be enabled once each profile is configured.",certVerify:"Verify credential",certSoon:"Coming soon"},
+pt:{navFeatured:"Destaques",featuredTitle:"Trabalho em destaque",featuredText:"Uma seleção de publicações, pôsteres e estudos de caso.",posterTitle:"Pôster científico",posterText:"Publicação científica sobre análise e ciência de dados.",posterLink:"Ver pôster",posterMissing:"Em breve.",caseStudyTitle:"Estudos de caso",caseStudyText:"Vou compartilhar aqui projetos aplicados, métodos e resultados reproduzíveis.",paypalText:"Doação internacional segura.",localSupportTitle:"Apoio local",localSupportText:"Plataforma local de doações.",localSupportLink:"Apoiar o projeto",supportMissing:"Os links de doação serão ativados quando cada perfil for configurado.",certVerify:"Verificar credencial",certSoon:"Em breve"},
+fr:{navFeatured:"À la une",featuredTitle:"Travail à la une",featuredText:"Une sélection de publications, affiches et études de cas.",posterTitle:"Affiche scientifique",posterText:"Publication scientifique sur l'analyse et la science des données.",posterLink:"Voir l'affiche",posterMissing:"Bientôt disponible.",caseStudyTitle:"Études de cas",caseStudyText:"Je partagerai ici des projets appliqués, des méthodes et des résultats reproductibles.",paypalText:"Don international sécurisé.",paypalLink:"Faire un don avec PayPal",localSupportTitle:"Soutien local",localSupportText:"Plateforme locale de dons.",localSupportLink:"Soutenir le projet",supportMissing:"Les liens de don seront activés lorsque chaque profil sera configuré.",certVerify:"Vérifier le justificatif",certSoon:"Bientôt disponible"},
+it:{navFeatured:"In evidenza",featuredTitle:"Lavoro in evidenza",featuredText:"Una selezione di pubblicazioni, poster e casi di studio.",posterTitle:"Poster scientifico",posterText:"Pubblicazione scientifica su analisi e scienza dei dati.",posterLink:"Vedi il poster",posterMissing:"Prossimamente.",caseStudyTitle:"Casi di studio",caseStudyText:"Condividerò qui progetti applicati, metodi e risultati riproducibili.",paypalText:"Donazione internazionale sicura.",localSupportTitle:"Supporto locale",localSupportText:"Piattaforma locale per donazioni.",localSupportLink:"Sostieni il progetto",supportMissing:"I link per le donazioni saranno attivati quando ogni profilo sarà configurato.",certVerify:"Verifica credenziale",certSoon:"Prossimamente"},
+de:{navFeatured:"Highlights",featuredTitle:"Ausgewählte Arbeit",featuredText:"Eine Auswahl an Veröffentlichungen, Postern und Fallstudien.",posterTitle:"Wissenschaftliches Poster",posterText:"Wissenschaftliche Veröffentlichung über Datenanalyse und Data Science.",posterLink:"Poster ansehen",posterMissing:"Demnächst verfügbar.",caseStudyTitle:"Fallstudien",caseStudyText:"Hier teile ich angewandte Projekte, Methoden und reproduzierbare Ergebnisse.",paypalText:"Sichere internationale Spende.",localSupportTitle:"Lokale Unterstützung",localSupportText:"Lokale Spendenplattform.",localSupportLink:"Projekt unterstützen",supportMissing:"Spendenlinks werden aktiviert, sobald jedes Profil eingerichtet ist.",certVerify:"Zertifikat verifizieren",certSoon:"Demnächst"}
 }
 
 const content={
@@ -671,34 +808,28 @@ supportText:"Wenn meine Inhalte oder Projekte Ihnen helfen, können Sie die Entw
 }
 }
 
-function updateContent(lang){
-const d=content[lang]
-if(!d)return
-htmlTag.lang=d.lang
-document.title=d.title
-if(metaDesc)metaDesc.content=d.description
-if(metaOgDesc)metaOgDesc.content=d.description
-if(metaTwitterDesc)metaTwitterDesc.content=d.description
-if(metaKeywords)metaKeywords.content=`${d.title}, Data Science, Machine Learning, MLOps, Data Engineering, Python, SQL, Portfolio`
-if(metaOgTitle)metaOgTitle.content=d.title
-if(metaTwitterTitle)metaTwitterTitle.content=d.title
-if(metaOgLocale){
-const locales={es:"es_ES",en:"en_US",pt:"pt_BR",fr:"fr_FR",it:"it_IT",de:"de_DE"}
-metaOgLocale.content=locales[lang]||"es_ES"
+// Genera las tarjetas de certificaciones según el idioma activo
+function renderCertifications(e){
+const grid=document.getElementById("certGrid")
+grid.innerHTML=""
+certConfig.forEach(cert=>{
+const hasLink=Boolean(cert.verifyUrl)
+const card=document.createElement("div")
+card.className="cert-card"+(hasLink?"":" cert-soon")
+card.innerHTML=`
+<div class="cert-logo">${cert.logo}</div>
+<div class="cert-body">
+<div class="cert-name">${cert.name}</div>
+<div class="cert-issuer">${cert.issuer}</div>
+<div class="cert-date">${cert.date}</div>
+${hasLink
+? `<a class="cert-verify" href="${cert.verifyUrl}" target="_blank" rel="noopener">${e.certVerify} →</a>`
+: `<span class="cert-badge-soon">${e.certSoon}</span>`
 }
-for(let k in d){
-if(k==="lang"||k==="title"||k==="description")continue
-let el=document.getElementById(k)
-if(el){
-el.textContent=d[k]
-}
-const e=extras[lang]
-for(let k in e){
-const el=document.getElementById(k)
-if(el)el.textContent=e[k]
-}
-renderConfiguredItems(e)
-updateLanguageUrl(lang)
+</div>
+`
+grid.appendChild(card)
+})
 }
 
 function renderConfiguredItems(e){
@@ -732,6 +863,8 @@ localLink.href=portfolioConfig.donations.localUrl
 localLink.classList.remove("is-hidden")
 }else localLink.classList.add("is-hidden")
 document.getElementById("supportMissing").classList.toggle("is-hidden",Boolean(portfolioConfig.donations.paypalUrl||portfolioConfig.donations.localUrl))
+
+renderCertifications(e)
 }
 
 function updateLanguageUrl(lang){
@@ -744,6 +877,41 @@ if(canonicalLink)canonicalLink.href=href
 if(metaOgUrl)metaOgUrl.content=href
 localStorage.setItem("portfolio-language",lang)
 }
+
+// FIX: renderConfiguredItems() y updateLanguageUrl() ahora se llaman
+// UNA sola vez por cambio de idioma, fuera del for loop de traducción
+// (antes se ejecutaban ~20 veces por cada cambio de idioma).
+function updateContent(lang){
+const d=content[lang]
+if(!d)return
+htmlTag.lang=d.lang
+document.title=d.title
+if(metaDesc)metaDesc.content=d.description
+if(metaOgDesc)metaOgDesc.content=d.description
+if(metaTwitterDesc)metaTwitterDesc.content=d.description
+if(metaKeywords)metaKeywords.content=`${d.title}, Data Science, Machine Learning, MLOps, Data Engineering, Python, SQL, Portfolio`
+if(metaOgTitle)metaOgTitle.content=d.title
+if(metaTwitterTitle)metaTwitterTitle.content=d.title
+if(metaOgLocale){
+const locales={es:"es_ES",en:"en_US",pt:"pt_BR",fr:"fr_FR",it:"it_IT",de:"de_DE"}
+metaOgLocale.content=locales[lang]||"es_ES"
+}
+for(let k in d){
+if(k==="lang"||k==="title"||k==="description")continue
+let el=document.getElementById(k)
+if(el){
+el.textContent=d[k]
+}
+}
+
+const e=extras[lang]
+for(let k in e){
+const el=document.getElementById(k)
+if(el)el.textContent=e[k]
+}
+
+renderConfiguredItems(e)
+updateLanguageUrl(lang)
 }
 
 selector.addEventListener("change",e=>{
