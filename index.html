@@ -540,23 +540,104 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </div>
 </section>
 </div>
+<section id="projects" class="specialties-standalone">
+<h2 id="projectsTitle">Proyectos</h2>
+<p id="projectsText">Proyectos aplicados end-to-end: desde el problema de negocio hasta el modelo en producción.</p>
+<div class="portfolio-grid">
+
+<article class="portfolio-card">
+<h3>Detección de patentes y rostros en el borde (Edge AI)</h3>
+<p>Sistema de videovigilancia inteligente sobre 2 cámaras IP conectadas a un DVR Dahua, con inferencia on-device en una Raspberry Pi 4 de 1GB de RAM. Incluye un LLM con fine-tuning para interpretar y corregir las lecturas de matrículas detectadas. Todo el pipeline de visión y el modelo de lenguaje corren optimizados para las limitaciones extremas de memoria del hardware.</p>
+<div>
+<span class="tag">Computer Vision</span>
+<span class="tag">Edge AI</span>
+<span class="tag">Raspberry Pi</span>
+<span class="tag">RTSP</span>
+<span class="tag">Fine-tuning LLM</span>
+<span class="tag">OCR</span>
+<span class="tag">Reconocimiento facial</span>
+</div>
+</article>
+
+<article class="portfolio-card">
+<h3>Clasificador de residuos</h3>
+<p>Modelo de Computer Vision para clasificar residuos por tipo de material y automatizar la separación en el proceso de reciclaje, entrenado con dataset propio. Actualmente en proceso de adaptación a una Raspberry Pi, para operar como solución embebida de bajo costo en el punto de descarte.</p>
+<div>
+<span class="tag">Computer Vision</span>
+<span class="tag">Edge AI</span>
+<span class="tag">Raspberry Pi</span>
+<span class="tag">Clasificación de imágenes</span>
+<span class="tag">Sustentabilidad</span>
+</div>
+</article>
+
+<article class="portfolio-card">
+<h3>Estimación de precios de alquiler — CABA y Mendoza</h3>
+<p>Modelo predictivo de precios de alquiler en Capital Federal (Argentina) y Mendoza, con datos propios obtenidos mediante scraping de Properati y ZonaProp. Incorpora análisis GIS para capturar el efecto de la ubicación (barrio, cercanía a servicios, zonas) sobre el precio, comparando el comportamiento del mercado inmobiliario entre ambas regiones.</p>
+<div>
+<span class="tag">Regression</span>
+<span class="tag">Real Estate</span>
+<span class="tag">GIS</span>
+<span class="tag">Web Scraping</span>
+<span class="tag">Geospatial Data</span>
+<span class="tag">Feature Engineering</span>
+</div>
+</article>
+
+<article class="portfolio-card">
+<h3>Detector de somnolencia</h3>
+<p>Sistema de Computer Vision que monitorea en tiempo real indicadores como cierre prolongado de ojos y bostezos para detectar somnolencia y emitir alertas tempranas, orientado a prevención de accidentes en contextos de conducción u operación de maquinaria. Entrenado con dataset propio.</p>
+<div>
+<span class="tag">Computer Vision</span>
+<span class="tag">Real-time</span>
+<span class="tag">Deep Learning</span>
+<span class="tag">Safety</span>
+</div>
+</article>
+
+<article class="portfolio-card">
+<h3>Detector de emociones con Computer Vision</h3>
+<p>Sistema de reconocimiento de emociones faciales en tiempo real a partir de video, entrenado con dataset propio, clasificando estados emocionales para casos de uso de análisis de experiencia de usuario o monitoreo de atención.</p>
+<div>
+<span class="tag">Computer Vision</span>
+<span class="tag">Emotion Recognition</span>
+<span class="tag">Deep Learning</span>
+<span class="tag">Real-time</span>
+</div>
+</article>
+
+<article class="portfolio-card">
+<h3>Predicción de churn</h3>
+<p>Modelo de clasificación para anticipar la baja de clientes, entrenado sobre dataset propio, con foco en explicabilidad de las variables que más influyen en la decisión, para que el equipo de negocio pueda accionar retención antes de que ocurra la pérdida.</p>
+<div>
+<span class="tag">Churn Prediction</span>
+<span class="tag">Clasificación</span>
+<span class="tag">Explainability</span>
+<span class="tag">Scikit-learn</span>
+</div>
+</article>
+
+<article class="portfolio-card">
+<h3>Sistema de recomendación para e-commerce a gran escala</h3>
+<p>Motor de recomendación híbrido que combina filtrado colaborativo (comportamiento de usuarios similares) con recomendación basada en contenido (atributos de producto), entrenado sobre dataset propio y diseñado para operar sobre grandes volúmenes de datos y catálogos extensos sin perder performance ni relevancia frente a usuarios nuevos.</p>
+<div>
+<span class="tag">Recommender Systems</span>
+<span class="tag">Collaborative Filtering</span>
+<span class="tag">Content-Based</span>
+<span class="tag">Big Data</span>
+<span class="tag">E-commerce</span>
+<span class="tag">Python</span>
+</div>
+</article>
+
+</div>
+</section>
 <div class="main-grid">
 <section id="certificaciones">
 <h2 id="certTitle">Certificaciones</h2>
 <p id="certText">Certificaciones verificables para reclutadores.</p>
 <div class="cert-grid" id="certGrid">
 <!-- Las tarjetas se generan por JS desde certConfig, más abajo -->
-</div>
-</section>
-<section id="projects">
-<h2 id="projectsTitle">Proyectos</h2>
-<p id="projectsText">Proyectos en desarrollo.</p>
-<div>
-<span class="tag">Próximamente</span>
-<span class="tag">Modelos ML</span>
-<span class="tag">Dashboards</span>
-<span class="tag">Data pipelines</span>
-<span class="tag">AI Agents</span>
 </div>
 </section>
 <section id="featured">
@@ -665,14 +746,6 @@ name:"Microsoft Certified: Azure Fundamentals (AZ-900)",
 issuer:"Microsoft",
 date:"2024", // <- poné el mes/año real
 verifyUrl:"" // <- pegá acá tu link de Microsoft Learn / Credly
-},
-{
-id:"cybersecurity",
-logo:"🛡️",
-name:"Cybersecurity Certification", // <- reemplazá por el nombre exacto de tu cert
-issuer:"", // <- poné el emisor real (ej. Google, ISC2, CompTIA, etc.)
-date:"", // <- poné el mes/año real
-verifyUrl:"" // <- pegá acá tu link de verificación cuando la tengas
 }
 ]
 
@@ -719,7 +792,7 @@ Formación en Ciencia de Datos, Análisis de Sistemas e Ingeniería Industrial. 
 
 Más de 3 años como docente en Data Science y Machine Learning, además de experiencia liderando proyectos y equipos técnicos end-to-end en analítica e IA.`,
 certTitle:"Certificaciones",
-certText:"Certificaciones verificables en Data Science, Machine Learning y Cloud.",
+certText:"Formación y certificaciones en Data Science, Machine Learning, Cloud y Ciberseguridad.",
 projectsTitle:"Proyectos",
 projectsText:"Proyectos profesionales próximamente disponibles.",
 resourcesTitle:"Recursos para alumnos",
@@ -753,7 +826,7 @@ Background in Data Science, Systems Analysis and Industrial Engineering. Main st
 
 Over 3 years as a teacher in Data Science and Machine Learning, plus experience leading end-to-end technical projects and teams in analytics and AI.`,
 certTitle:"Certifications",
-certText:"Verified certifications in Data Science, Machine Learning and Cloud.",
+certText:"Training and certifications in Data Science, Machine Learning, Cloud and Cybersecurity.",
 projectsTitle:"Projects",
 projectsText:"Professional projects coming soon.",
 resourcesTitle:"Resources for students",
@@ -787,7 +860,7 @@ Formação em Ciência de Dados, Análise de Sistemas e Engenharia Industrial. S
 
 Mais de 3 anos como professor em Data Science e Machine Learning, além de experiência liderando projetos e equipes técnicas end-to-end em analytics e IA.`,
 certTitle:"Certificações",
-certText:"Certificações verificáveis em Data Science, Machine Learning e Cloud.",
+certText:"Formação e certificações em Data Science, Machine Learning, Cloud e Cibersegurança.",
 projectsTitle:"Projetos",
 projectsText:"Projetos profissionais em breve.",
 resourcesTitle:"Recursos para alumnos",
@@ -821,7 +894,7 @@ Formation en Science des Données, Analyse des Systèmes et Génie Industriel. S
 
 Plus de 3 ans comme enseignant en Data Science et Machine Learning, en plus d'une expérience dans le leadership de projets et d'équipes techniques end-to-end en analytique et IA.`,
 certTitle:"Certifications",
-certText:"Certifications vérifiables en Data Science, Machine Learning et Cloud.",
+certText:"Formation et certifications en Data Science, Machine Learning, Cloud et Cybersécurité.",
 projectsTitle:"Projets",
 projectsText:"Projets professionnels bientôt disponibles.",
 resourcesTitle:"Ressources pour étudiants",
@@ -855,7 +928,7 @@ Formazione in Data Science, Analisi dei Sistemi e Ingegneria Industriale. Stack 
 
 Più di 3 anni come docente in Data Science e Machine Learning, oltre a esperienza nella guida di progetti e team tecnici end-to-end in analisi e IA.`,
 certTitle:"Certificazioni",
-certText:"Certificazioni verificabili in Data Science, Machine Learning e Cloud.",
+certText:"Formazione e certificazioni in Data Science, Machine Learning, Cloud e Cybersecurity.",
 projectsTitle:"Progetti",
 projectsText:"Progetti professionali disponibili a breve.",
 resourcesTitle:"Risorse per studenti",
@@ -889,7 +962,7 @@ Ausbildung in Data Science, Systemanalyse und Industrieingenieurwesen. Haupt-Sta
 
 Mehr als 3 Jahre als Dozent in Data Science und Machine Learning, sowie Erfahrung in der Leitung von End-to-End-Projekten und technischen Teams in Analytik und KI.`,
 certTitle:"Zertifizierungen",
-certText:"Verifizierbare Zertifizierungen in Data Science, Machine Learning und Cloud.",
+certText:"Weiterbildung und Zertifizierungen in Data Science, Machine Learning, Cloud und Cybersicherheit.",
 projectsTitle:"Projekte",
 projectsText:"Professionelle Projekte bald verfügbar.",
 resourcesTitle:"Ressourcen für Studenten",
