@@ -1,0 +1,82 @@
+/* ==========================================================
+   accessibility.css — Accesibilidad (WCAG 2.2 AA) para luchoxiii.github.io
+   Ponelo DESPUÉS del </style> del index.html.
+   ========================================================== */
+
+/* --- Foco visible (WCAG 2.4.7 / 2.4.11) --- */
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip-link:focus-visible{outline-color:#fff}
+
+/* --- Correcciones de contraste: las tarjetas "próximamente" no deben bajar opacidad --- */
+.cert-soon{opacity:1}
+.cert-badge-soon{color:var(--text);border:1px solid var(--border)}
+
+/* --- Áreas táctiles mínimas (WCAG 2.5.8) --- */
+select,button{min-height:36px}
+.nav a{display:inline-block;padding-top:4px}
+
+/* --- Texto solo para lectores de pantalla / aviso de pestaña nueva --- */
+.a11y-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a[data-a11y-ext]::after{content:var(--a11y-newtab,"");position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* --- Preferencias del sistema: movimiento reducido --- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  section:hover,.cert-card:hover,.resource-card:hover{transform:none}
+}
+/* --- Modo de colores forzados de Windows --- */
+@media (forced-colors:active){
+  h1{background:none;-webkit-text-fill-color:currentColor;color:CanvasText}
+}
+
+/* ==========================================================
+   Opciones del panel (se activan con clases en <html>)
+   ========================================================== */
+html.a11y-motion{scroll-behavior:auto}
+html.a11y-motion *,html.a11y-motion *::before,html.a11y-motion *::after{animation:none!important;transition:none!important}
+html.a11y-motion section:hover,html.a11y-motion .cert-card:hover,html.a11y-motion .resource-card:hover{transform:none}
+
+html.a11y-spacing header,html.a11y-spacing main,html.a11y-spacing footer{line-height:1.5}
+html.a11y-spacing header *,html.a11y-spacing main *,html.a11y-spacing footer *{letter-spacing:.12em!important;word-spacing:.16em!important;line-height:1.5!important}
+html.a11y-spacing p{margin-bottom:2em}
+
+html.a11y-font,html.a11y-font *:not(svg):not(svg *){font-family:Verdana,Tahoma,"Trebuchet MS",sans-serif!important}
+
+html.a11y-links a:not(.skip-link){text-decoration:underline!important;text-decoration-thickness:2px;text-underline-offset:3px}
+
+html.a11y-contrast,html.a11y-contrast body,html.a11y-contrast body.dark{
+  --bg:#000;--card:#000;--text:#fff;--muted:#f1f5f9;--accent:#ffe14d;--border:#fff;--shadow:transparent;
+}
+html.a11y-contrast body{background:#000;color:#fff}
+html.a11y-contrast h1{background:none;-webkit-text-fill-color:currentColor;color:var(--accent)}
+html.a11y-contrast section,html.a11y-contrast .portfolio-card,html.a11y-contrast .support-card,
+html.a11y-contrast .cert-card,html.a11y-contrast .resource-card,html.a11y-contrast .hero-card{background:#000;border:2px solid #fff;backdrop-filter:none}
+html.a11y-contrast .tag,html.a11y-contrast .github,html.a11y-contrast .cert-verify{background:#000;border:1px solid #fff;color:#fff}
+html.a11y-contrast a{color:var(--accent)}
+html.a11y-contrast .nav a{color:#fff}
+
+/* ==========================================================
+   Widget flotante
+   ========================================================== */
+.a11y-widget{position:fixed;left:16px;bottom:16px;z-index:1001}
+.a11y-fab{width:52px;height:52px;padding:0;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:var(--accent);color:var(--bg);border:2px solid var(--bg);box-shadow:0 6px 18px var(--shadow)}
+.a11y-fab svg{width:28px;height:28px;fill:currentColor}
+.a11y-panel{position:absolute;left:0;bottom:64px;width:min(340px,calc(100vw - 32px));max-height:calc(100vh - 110px);overflow:auto;
+  background:var(--bg);color:var(--text);border:1px solid var(--accent);border-radius:14px;padding:16px;box-shadow:0 12px 32px var(--shadow)}
+.a11y-panel[hidden]{display:none}
+.a11y-panel h2{font-size:1.05rem;margin-bottom:10px}
+.a11y-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.a11y-row-label{font-size:.9rem}
+.a11y-size{display:flex;align-items:center;gap:8px}
+.a11y-size output{min-width:3.2em;text-align:center;font-size:.9rem}
+.a11y-size button{width:40px;font-weight:700}
+.a11y-opt{display:block;width:100%;text-align:left;margin-bottom:8px;padding:9px 12px}
+.a11y-opt[aria-pressed="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:600}
+.a11y-opt[aria-pressed="true"]::before{content:"✓ "}
+.a11y-actions{display:flex;gap:8px;margin-top:6px}
+.a11y-actions button{flex:1}
+.a11y-statement{margin-top:14px;font-size:.85rem;color:var(--muted);max-width:720px;margin-inline:auto;text-align:left}
+.a11y-statement summary{cursor:pointer;text-align:center;color:var(--text);font-weight:600}
+.a11y-statement p{margin-top:8px}
