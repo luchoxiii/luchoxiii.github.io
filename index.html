@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#020617">
 <title>Lucho | Data Science Engineer | Machine Learning | MLOps | Portfolio</title>
 <meta name="description" content="Data Science Engineer con 6+ años de experiencia en Machine Learning, MLOps, Data Engineering y IA aplicada. Portfolio, proyectos y certificaciones.">
 <meta name="keywords" content="Data Science, Machine Learning, Deep Learning, MLOps, Data Engineering, Python, SQL, TensorFlow, PyTorch, Scikit-learn, Power BI, Tableau, Looker, Qlik, AWS, Azure, GCP, AI Safety, Data Governance, AI Agents, Portfolio, Data Scientist">
@@ -76,6 +77,20 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"WebPage",
+"name":"Lucho | Data Science Engineer | Portfolio",
+"url":"https://luchoxiii.github.io/",
+"inLanguage":["es","en","pt","fr","it","de"],
+"accessibilityFeature":["alternativeText","displayTransformability","highContrastDisplay","readingOrder","structuralNavigation","ARIA"],
+"accessibilityControl":["fullKeyboardControl"],
+"accessibilityHazard":["noFlashingHazard","noMotionSimulationHazard","noSoundHazard"],
+"accessibilitySummary":"Navegación completa con teclado, enlace para saltar al contenido, panel con tamaño de texto, alto contraste, espaciado, fuente legible y pausa de animaciones. Seis idiomas."
+}
+</script>
+
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-092CLCQ0SX"></script>
 <script>
@@ -117,7 +132,7 @@ position:absolute;
 left:-999px;
 top:auto;
 background:var(--accent);
-color:#fff;
+color:var(--bg);
 padding:10px 16px;
 border-radius:0 0 8px 0;
 z-index:1000;
@@ -417,7 +432,7 @@ color:var(--muted);
 font-size:.8rem;
 }
 </style>
-<base target="_blank">
+<link rel="stylesheet" href="accessibility.css">
 </head>
 <body class="dark">
 <a href="#main-content" class="skip-link">Saltar al contenido</a>
@@ -429,30 +444,30 @@ font-size:.8rem;
 </div>
 <div class="controls">
 <select id="languageSelector" aria-label="Seleccionar idioma">
-<option value="es">ES</option>
-<option value="en">EN</option>
-<option value="pt">PT</option>
-<option value="fr">FR</option>
-<option value="it">IT</option>
-<option value="de">DE</option>
+<option value="es" lang="es">Español</option>
+<option value="en" lang="en">English</option>
+<option value="pt" lang="pt">Português</option>
+<option value="fr" lang="fr">Français</option>
+<option value="it" lang="it">Italiano</option>
+<option value="de" lang="de">Deutsch</option>
 </select>
-<button id="themeToggle" aria-label="Cambiar tema">🌙</button>
+<button id="themeToggle" type="button" aria-label="Modo oscuro" aria-pressed="true"><span aria-hidden="true">🌙</span></button>
 </div>
 </div>
 <nav class="nav" aria-label="Navegación principal">
-<a data-scroll="#about" id="navAbout">Sobre mí</a>
-<a data-scroll="#specialties" id="navSpecialties">Especialidades</a>
-<a data-scroll="#howiwork" id="navHowIWork">Cómo trabajo</a>
-<a data-scroll="#certificaciones" id="navCert">Certificaciones</a>
-<a data-scroll="#featured" id="navFeatured">Destacados</a>
-<a data-scroll="#projects" id="navProjects">Proyectos</a>
-<a data-scroll="#resources" id="navResources">Recursos</a>
-<a data-scroll="#contact" id="navContact">Contacto</a>
-<a data-scroll="#support" id="navSupport">Contribuciones</a>
+<a href="#about" data-scroll="#about" id="navAbout" target="_self">Sobre mí</a>
+<a href="#specialties" data-scroll="#specialties" id="navSpecialties" target="_self">Especialidades</a>
+<a href="#howiwork" data-scroll="#howiwork" id="navHowIWork" target="_self">Cómo trabajo</a>
+<a href="#certificaciones" data-scroll="#certificaciones" id="navCert" target="_self">Certificaciones</a>
+<a href="#featured" data-scroll="#featured" id="navFeatured" target="_self">Destacados</a>
+<a href="#projects" data-scroll="#projects" id="navProjects" target="_self">Proyectos</a>
+<a href="#resources" data-scroll="#resources" id="navResources" target="_self">Recursos</a>
+<a href="#contact" data-scroll="#contact" id="navContact" target="_self">Contacto</a>
+<a href="#support" data-scroll="#support" id="navSupport" target="_self">Contribuciones</a>
 </nav>
 </header>
 <main id="main-content">
-<section id="about" class="hero-card">
+<section id="about" aria-labelledby="aboutTitle" class="hero-card">
 <div class="about-container">
 <img src="foto.jpg" alt="Foto de Lucho" class="avatar" loading="lazy">
 <div>
@@ -498,7 +513,7 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </div>
 </section>
 <div class="specialties-grid">
-<section id="specialties">
+<section id="specialties" aria-labelledby="specialtiesTitle">
 <h2 id="specialtiesTitle">Especialidades</h2>
 <p id="specialtiesText">Tecnología aplicada con una mirada de producto, reproducibilidad y uso responsable.</p>
 <div class="portfolio-grid">
@@ -520,7 +535,7 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </article>
 </div>
 </section>
-<section id="howiwork">
+<section id="howiwork" aria-labelledby="howiworkTitle">
 <h2 id="howiworkTitle">Cómo trabajo</h2>
 <p id="howiworkText">Del problema y los datos a soluciones medibles, explicables y listas para usar.</p>
 <div class="portfolio-grid">
@@ -543,7 +558,7 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </div>
 </section>
 </div>
-<section id="projects" class="specialties-standalone">
+<section id="projects" aria-labelledby="projectsTitle" class="specialties-standalone">
 <h2 id="projectsTitle">Proyectos</h2>
 <p id="projectsText">Proyectos aplicados end-to-end: desde el problema de negocio hasta el modelo en producción.</p>
 <div class="portfolio-grid">
@@ -636,14 +651,14 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </div>
 </section>
 <div class="main-grid">
-<section id="certificaciones">
+<section id="certificaciones" aria-labelledby="certTitle">
 <h2 id="certTitle">Certificaciones</h2>
 <p id="certText">Certificaciones verificables para reclutadores.</p>
 <div class="cert-grid" id="certGrid">
 <!-- Las tarjetas se generan por JS desde certConfig, más abajo -->
 </div>
 </section>
-<section id="featured">
+<section id="featured" aria-labelledby="featuredTitle">
 <h2 id="featuredTitle">Trabajo destacado</h2>
 <p id="featuredText">Una selección de publicaciones, pósters y casos de estudio.</p>
 <div class="portfolio-grid">
@@ -651,7 +666,7 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <h3 id="posterTitle">Póster científico</h3>
 <p id="posterText">Publicación científica sobre análisis y ciencia de datos.</p>
 <img id="posterImage" class="poster-preview is-hidden" src="" alt="Póster científico de Lucho" loading="lazy">
-<a id="posterLink" class="github is-hidden" href="">Ver póster</a>
+<a id="posterLink" class="github is-hidden" href="" target="_blank" rel="noopener noreferrer">Ver póster</a>
 <p id="posterMissing" style="margin-top:12px;font-size:.85rem">Próximamente disponible.</p>
 </article>
 <article class="portfolio-card">
@@ -660,22 +675,22 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </article>
 </div>
 </section>
-<section id="resources">
+<section id="resources" aria-labelledby="resourcesTitle">
 <h2 id="resourcesTitle">Recursos para alumnos</h2>
 <p id="resourcesText">Material educativo, guías y notebooks disponibles en GitHub.</p>
 <div class="resources-grid">
-<a class="resource-card" href="https://github.com/luchoxiii/Students/tree/main">
-<div class="resource-icon">
-<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+<a class="resource-card" href="https://github.com/luchoxiii/Students/tree/main" target="_blank" rel="noopener noreferrer">
+<div class="resource-icon" aria-hidden="true">
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
 </div>
 <div class="resource-body">
 <div class="resource-name" id="resourceStudentsName">Repositorio para alumnos</div>
 <div class="resource-desc" id="resourceStudentsDesc">Notebooks, guías y ejercicios de Data Science y Machine Learning.</div>
 </div>
 </a>
-<a class="resource-card" href="https://github.com/luchoxiii">
-<div class="resource-icon">
-<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+<a class="resource-card" href="https://github.com/luchoxiii" target="_blank" rel="noopener noreferrer">
+<div class="resource-icon" aria-hidden="true">
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
 </div>
 <div class="resource-body">
 <div class="resource-name" id="resourceProfileName">Mi perfil de GitHub</div>
@@ -684,26 +699,27 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </a>
 </div>
 </section>
-<section id="contact">
+<section id="contact" aria-labelledby="contactTitle">
 <h2 id="contactTitle">Contacto profesional</h2>
 <p id="contactText1">Estoy disponible para oportunidades laborales, proyectos de consultoría, colaboración académica o iniciativas relacionadas con Data Science, Machine Learning y automatización.</p>
 <p id="contactText2">Para consultas profesionales, propuestas laborales o networking técnico, puede contactarme a través del siguiente correo electrónico:</p>
-<a class="github" href="mailto:eagleblue91@gmail.com">Enviar correo profesional</a>
+<a class="github" id="contactMailLink" href="#" rel="nofollow" data-mail-enc="101,97,103,108,101,98,108,117,101,57,49,64,103,109,97,105,108,46,99,111,109">Enviar correo profesional</a>
+<noscript><p style="margin-top:10px;font-size:.85rem">eagleblue91 [arroba] gmail [punto] com</p></noscript>
 <p id="contactText3" style="margin-top:12px;font-size:.85rem;color:var(--muted)">Tiempo de respuesta estimado: 24-48 horas.</p>
 </section>
-<section id="support">
+<section id="support" aria-labelledby="supportTitle">
 <h2 id="supportTitle">Contribuciones o donaciones</h2>
 <p id="supportText">Si mi contenido o proyectos te ayudan, podés apoyar el desarrollo de nuevos recursos.</p>
 <div class="support-grid">
 <article id="paypalCard" class="support-card">
 <h3>PayPal</h3>
 <p id="paypalText">Donación internacional segura.</p>
-<a id="paypalLink" class="github is-hidden" href="">Donar con PayPal</a>
+<a id="paypalLink" class="github is-hidden" href="" target="_blank" rel="noopener noreferrer">Donar con PayPal</a>
 </article>
 <article id="localSupportCard" class="support-card">
 <h3 id="localSupportTitle">Apoyo local</h3>
 <p id="localSupportText">Plataforma local de donaciones.</p>
-<a id="localSupportLink" class="github is-hidden" href="">Apoyar el proyecto</a>
+<a id="localSupportLink" class="github is-hidden" href="" target="_blank" rel="noopener noreferrer">Apoyar el proyecto</a>
 </article>
 </div>
 <p id="supportMissing" style="margin-top:14px;font-size:.85rem;color:var(--muted)">Los enlaces de donación se habilitarán cuando se configure cada perfil.</p>
@@ -990,7 +1006,7 @@ const hasLink=Boolean(cert.verifyUrl)
 const card=document.createElement("div")
 card.className="cert-card"+(hasLink?"":" cert-soon")
 card.innerHTML=`
-<div class="cert-logo">${cert.logo}</div>
+<div class="cert-logo" aria-hidden="true">${cert.logo}</div>
 <div class="cert-body">
 <div class="cert-name">${cert.name}</div>
 <div class="cert-issuer">${cert.issuer}</div>
@@ -1012,6 +1028,7 @@ const posterLink=document.getElementById("posterLink")
 const posterMissing=document.getElementById("posterMissing")
 if(poster.imageUrl){
 posterImage.src=poster.imageUrl
+posterImage.alt=e.posterTitle
 posterImage.classList.remove("is-hidden")
 }else posterImage.classList.add("is-hidden")
 if(poster.projectUrl){
@@ -1109,13 +1126,24 @@ const targetId=link.getAttribute('data-scroll')
 const target=document.querySelector(targetId)
 if(target){
 target.scrollIntoView({behavior:'smooth',block:'start'})
+target.setAttribute('tabindex','-1')
+target.focus({preventScroll:true})
 history.pushState(null,null,targetId)
 }
 })
 })
 
+const mailLink=document.getElementById("contactMailLink")
+if(mailLink){
+const codes=mailLink.getAttribute("data-mail-enc").split(",").map(Number)
+const address=String.fromCharCode(...codes)
+mailLink.href="mailto:"+address
+mailLink.removeAttribute("data-mail-enc")
+}
+
 const year=new Date().getFullYear()
 document.getElementById("copyright").textContent=`© 2020 - ${year} Lucho`
 </script>
+<script src="accessibility.js" defer></script>
 </body>
 </html>
