@@ -11,6 +11,7 @@ Data Science Engineer com mais de 6 anos de experiência em Machine Learning, Da
 | Projeto | Do que se trata | Código |
 |---|---|---|
 | Detecção de placas e rostos na borda (Edge AI) | Videomonitoramento com 2 câmeras IP e um DVR Dahua, inferência em um Raspberry Pi 4 de 1 GB e um LLM com fine-tuning que corrige as leituras de placas | [car_patent_pi](https://github.com/luchoxiii/car_patent_pi) |
+| GestionQuincaillerie: ERP e ponto de venda para lojas de ferragens | Monorepo TypeScript (React, NestJS, PostgreSQL, Redis) com POS, estoque multidepósito, faturamento AFIP e integração com o Mercado Livre; inclui analytics de clientes com RFM, segmentação e score de churn explicável | [GestionQuincaillerie](https://github.com/luchoxiii/GestionQuincaillerie) |
 | Estimativa de preços de aluguel: Buenos Aires e Mendoza | Regressão com dados próprios obtidos por scraping do Properati e do ZonaProp, mais análise GIS do efeito da localização | [scraper_propiedad](https://github.com/luchoxiii/scraper_propiedad) |
 | Classificador de resíduos | Computer Vision para separar resíduos por material; em adaptação para Raspberry Pi | — |
 | Detector de sonolência | Detecção em tempo real de fechamento prolongado dos olhos e bocejos para prevenir acidentes | — |
@@ -28,7 +29,7 @@ Data Science Engineer com mais de 6 anos de experiência em Machine Learning, Da
 - **ML e Deep Learning:** Scikit-learn, XGBoost, TensorFlow, PyTorch, Pandas, NumPy
 - **Computer Vision e Edge AI:** OCR, reconhecimento facial, inferência em Raspberry Pi, RTSP
 - **Visualização e BI:** Power BI, Tableau, Looker, Qlik, Matplotlib, Seaborn, Plotly
-- **Engenharia e MLOps:** Git, Docker, APIs, pipelines ETL
+- **Engenharia e MLOps:** Git, Docker, Podman, APIs, pipelines ETL, TypeScript, React, NestJS, PostgreSQL
 - **Cloud:** AWS, Azure, GCP
 
 ## Recursos para alunos
@@ -45,14 +46,17 @@ Meu e-mail profissional está na [seção de contato do portfolio](https://lucho
 
 | Arquivo | Conteúdo |
 |---|---|
-| `index.html` | A página inteira: estrutura, estilos, textos em 6 idiomas e lógica |
+| `index.html` | Estrutura, estilos e lógica da página |
+| `i18n/` | Textos de cada idioma: `es.js`, `en.js`, `pt.js`, `fr.js`, `it.js`, `de.js` |
+| `404.html` | Página de erro que respeita o idioma e o tema do visitante |
+| `avatar.webp` | Foto de perfil recortada e otimizada |
 | `accessibility.js` / `accessibility.css` | Painel de acessibilidade e melhorias ARIA |
 | `assets/` | Favicons e pôster científico (JPG e PDF) |
-| `foto.jpg` | Foto de perfil e imagem para redes sociais |
+| `foto.jpg` | Imagem exibida ao compartilhar o link nas redes |
 | `sitemap.xml`, `robots.txt` | SEO |
 
-**Como editar o mais comum (tudo dentro de `index.html`):**
+**Como editar o mais comum:**
 
-- **Certificações:** objeto `certConfig`. Preencha `verifyUrl` com o link do Credly ou do Microsoft Learn e o cartão deixa de aparecer como "em breve".
-- **Pôster e doações:** objeto `portfolioConfig`.
-- **Textos e idiomas:** objetos `content`, `extras` e `i18n`. Ao adicionar um texto novo no HTML, coloque `data-i18n="chave"` e cadastre essa chave nos 6 idiomas dentro de `i18n`; caso contrário, ele ficará sem tradução.
+- **Certificações:** objeto `certConfig` em `index.html`. Preencha `verifyUrl` com o link do Credly ou do Microsoft Learn e o cartão deixa de aparecer como "em breve".
+- **Pôster e link do Ko-fi:** objeto `portfolioConfig` em `index.html`. Se deixar `kofiUrl` vazio, a linha do rodapé desaparece.
+- **Textos e idiomas:** cada idioma tem seu próprio arquivo em `i18n/`. Para adicionar um texto novo, coloque `data-i18n="chave"` no elemento HTML e adicione essa chave nos 6 arquivos. Se esquecer algum, o console do navegador mostra um aviso com as chaves que faltam.

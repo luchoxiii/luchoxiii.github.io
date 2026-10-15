@@ -11,6 +11,7 @@ Data Science Engineer con oltre 6 anni di esperienza in Machine Learning, Data E
 | Progetto | Di cosa si tratta | Codice |
 |---|---|---|
 | Rilevamento di targhe e volti sull'edge (Edge AI) | Videosorveglianza con 2 telecamere IP e un DVR Dahua, inferenza su un Raspberry Pi 4 da 1 GB e un LLM con fine-tuning che corregge le letture delle targhe | [car_patent_pi](https://github.com/luchoxiii/car_patent_pi) |
+| GestionQuincaillerie: ERP e punto vendita per ferramenta | Monorepo TypeScript (React, NestJS, PostgreSQL, Redis) con POS, inventario multimagazzino, fatturazione AFIP e integrazione con Mercado Libre; include analisi clienti con RFM, segmentazione e score di churn spiegabile | [GestionQuincaillerie](https://github.com/luchoxiii/GestionQuincaillerie) |
 | Stima dei prezzi d'affitto: Buenos Aires e Mendoza | Regressione su dati propri raccolti tramite scraping di Properati e ZonaProp, con analisi GIS dell'effetto della posizione | [scraper_propiedad](https://github.com/luchoxiii/scraper_propiedad) |
 | Classificatore di rifiuti | Computer Vision per separare i rifiuti per materiale; in fase di adattamento a Raspberry Pi | — |
 | Rilevatore di sonnolenza | Rilevamento in tempo reale della chiusura prolungata degli occhi e degli sbadigli per prevenire incidenti | — |
@@ -28,7 +29,7 @@ Data Science Engineer con oltre 6 anni di esperienza in Machine Learning, Data E
 - **ML e Deep Learning:** Scikit-learn, XGBoost, TensorFlow, PyTorch, Pandas, NumPy
 - **Computer Vision ed Edge AI:** OCR, riconoscimento facciale, inferenza su Raspberry Pi, RTSP
 - **Visualizzazione e BI:** Power BI, Tableau, Looker, Qlik, Matplotlib, Seaborn, Plotly
-- **Ingegneria e MLOps:** Git, Docker, API, pipeline ETL
+- **Ingegneria e MLOps:** Git, Docker, Podman, API, pipeline ETL, TypeScript, React, NestJS, PostgreSQL
 - **Cloud:** AWS, Azure, GCP
 
 ## Risorse per studenti
@@ -45,14 +46,17 @@ La mia e-mail professionale si trova nella [sezione contatti del portfolio](http
 
 | File | Contenuto |
 |---|---|
-| `index.html` | L'intera pagina: struttura, stili, testi in 6 lingue e logica |
+| `index.html` | Struttura, stili e logica della pagina |
+| `i18n/` | Testi di ogni lingua: `es.js`, `en.js`, `pt.js`, `fr.js`, `it.js`, `de.js` |
+| `404.html` | Pagina di errore che rispetta la lingua e il tema del visitatore |
+| `avatar.webp` | Foto profilo ritagliata e ottimizzata |
 | `accessibility.js` / `accessibility.css` | Pannello di accessibilità e miglioramenti ARIA |
 | `assets/` | Favicon e poster scientifico (JPG e PDF) |
-| `foto.jpg` | Foto profilo e immagine per i social |
+| `foto.jpg` | Immagine mostrata quando il link viene condiviso sui social |
 | `sitemap.xml`, `robots.txt` | SEO |
 
-**Come modificare le cose più comuni (tutto dentro `index.html`):**
+**Come modificare le cose più comuni:**
 
-- **Certificazioni:** l'oggetto `certConfig`. Inserisci in `verifyUrl` il link di Credly o Microsoft Learn e la scheda smette di apparire come "prossimamente".
-- **Poster e donazioni:** l'oggetto `portfolioConfig`.
-- **Testi e lingue:** gli oggetti `content`, `extras` e `i18n`. Se aggiungi un nuovo testo all'HTML, assegnagli `data-i18n="chiave"` e inserisci quella chiave in tutte e 6 le lingue dentro `i18n`; altrimenti resterà non tradotto.
+- **Certificazioni:** l'oggetto `certConfig` in `index.html`. Inserisci in `verifyUrl` il link di Credly o Microsoft Learn e la scheda smette di apparire come "prossimamente".
+- **Poster e link Ko-fi:** l'oggetto `portfolioConfig` in `index.html`. Lascia `kofiUrl` vuoto per nascondere la riga nel piè di pagina.
+- **Testi e lingue:** ogni lingua ha il suo file in `i18n/`. Per aggiungere un nuovo testo, assegna all'elemento HTML `data-i18n="chiave"` e aggiungi quella chiave in tutti e 6 i file. Se ne dimentichi uno, la console del browser mostra un avviso con le chiavi mancanti.

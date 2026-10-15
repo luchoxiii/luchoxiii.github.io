@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#020617">
+<title>404 | Lucho</title>
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<style>
+:root{--bg:#ffffff;--card:#f8fafc;--text:#0f172a;--muted:#475569;--accent:#2563eb;--border:#e2e8f0}
+.dark{--bg:#020617;--card:rgba(15,23,42,0.75);--text:#e2e8f0;--muted:#94a3b8;--accent:#38bdf8;--border:rgba(148,163,184,0.15)}
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+body{background:var(--bg);color:var(--text);min-height:100vh;display:grid;place-items:center;padding:20px;line-height:1.6}
+main{max-width:520px;width:100%;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px}
+.code{font-size:3rem;font-weight:700;color:var(--accent);line-height:1}
+h1{font-size:1.3rem;margin:12px 0 8px}
+p{color:var(--muted)}
+a{display:inline-block;margin-top:20px;padding:10px 14px;border-radius:10px;background:rgba(56,189,248,.15);border:1px solid rgba(56,189,248,.3);color:var(--accent);text-decoration:none}
+a:hover{background:rgba(56,189,248,.25)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body class="dark">
+<main>
+<div class="code" aria-hidden="true">404</div>
+<h1 id="t">Esta página no existe</h1>
+<p id="d">Puede que el enlace esté mal escrito o que la página se haya movido.</p>
+<a id="home" href="/">Volver al portfolio</a>
+</main>
+<script>
+(function(){
+var T={
+es:["Esta página no existe","Puede que el enlace esté mal escrito o que la página se haya movido.","Volver al portfolio"],
+en:["This page doesn't exist","The link may be mistyped, or the page may have moved.","Back to the portfolio"],
+pt:["Esta página não existe","O link pode estar digitado errado ou a página pode ter sido movida.","Voltar ao portfolio"],
+fr:["Cette page n'existe pas","Le lien est peut-être mal saisi, ou la page a été déplacée.","Retour au portfolio"],
+it:["Questa pagina non esiste","Il link potrebbe essere scritto male, oppure la pagina è stata spostata.","Torna al portfolio"],
+de:["Diese Seite existiert nicht","Der Link ist möglicherweise falsch geschrieben oder die Seite wurde verschoben.","Zurück zum Portfolio"]
+};
+var lang=null,theme=null;
+try{lang=localStorage.getItem("portfolio-language");theme=localStorage.getItem("portfolio-theme")}catch(e){}
+if(!T[lang])lang=(navigator.language||"es").slice(0,2);
+if(!T[lang])lang="es";
+if(theme==="light"||(!theme&&window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)){
+document.body.classList.remove("dark");
+document.querySelector('meta[name="theme-color"]').content="#ffffff";
+}
+document.documentElement.lang=lang;
+document.getElementById("t").textContent=T[lang][0];
+document.getElementById("d").textContent=T[lang][1];
+var home=document.getElementById("home");
+home.textContent=T[lang][2];
+home.href=lang==="es"?"/":"/?lang="+lang;
+})();
+</script>
+</body>
+</html>
