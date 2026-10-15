@@ -456,8 +456,8 @@ font-size:.8rem;
 </div>
 <nav class="nav" aria-label="Navegación principal">
 <a href="#about" data-scroll="#about" id="navAbout" target="_self">Sobre mí</a>
-<a href="#specialties" data-scroll="#specialties" id="navSpecialties" target="_self">Especialidades</a>
-<a href="#howiwork" data-scroll="#howiwork" id="navHowIWork" target="_self">Cómo trabajo</a>
+<a href="#specialties" data-scroll="#specialties" id="navSpecialties" data-i18n="navSpecialties" target="_self">Especialidades</a>
+<a href="#howiwork" data-scroll="#howiwork" id="navHowIWork" data-i18n="navHowIWork" target="_self">Cómo trabajo</a>
 <a href="#certificaciones" data-scroll="#certificaciones" id="navCert" target="_self">Certificaciones</a>
 <a href="#featured" data-scroll="#featured" id="navFeatured" target="_self">Destacados</a>
 <a href="#projects" data-scroll="#projects" id="navProjects" target="_self">Proyectos</a>
@@ -469,7 +469,7 @@ font-size:.8rem;
 <main id="main-content">
 <section id="about" aria-labelledby="aboutTitle" class="hero-card">
 <div class="about-container">
-<img src="foto.jpg" alt="Foto de Lucho" class="avatar" loading="lazy">
+<img src="foto.jpg" alt="Foto de Lucho" data-i18n-alt="avatarAlt" class="avatar" loading="lazy">
 <div>
 <h2 id="aboutTitle">Sobre mí</h2>
 <p id="aboutText">Data Science Engineer con 6+ años de experiencia en Machine Learning, Data Engineering, BI y analítica avanzada. Especializado en modelos predictivos, automatización, pipelines de datos, agentes de IA, MLOps y optimización de procesos.
@@ -514,46 +514,46 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </section>
 <div class="specialties-grid">
 <section id="specialties" aria-labelledby="specialtiesTitle">
-<h2 id="specialtiesTitle">Especialidades</h2>
-<p id="specialtiesText">Tecnología aplicada con una mirada de producto, reproducibilidad y uso responsable.</p>
+<h2 id="specialtiesTitle" data-i18n="specialtiesTitle">Especialidades</h2>
+<p id="specialtiesText" data-i18n="specialtiesText">Tecnología aplicada con una mirada de producto, reproducibilidad y uso responsable.</p>
 <div class="portfolio-grid">
 <article class="portfolio-card">
 <h3>Machine Learning &amp; Data</h3>
-<p>Modelos predictivos, analítica avanzada, Deep Learning y visualización para decisiones basadas en datos.</p>
+<p data-i18n="spec1D">Modelos predictivos, analítica avanzada, Deep Learning y visualización para decisiones basadas en datos.</p>
 </article>
 <article class="portfolio-card">
 <h3>Generative AI &amp; LLMs</h3>
-<p>LLMs, agentes de IA, automatización, evaluación y diseño de flujos de trabajo asistidos por IA.</p>
+<p data-i18n="spec2D">LLMs, agentes de IA, automatización, evaluación y diseño de flujos de trabajo asistidos por IA.</p>
 </article>
 <article class="portfolio-card">
 <h3>Data Engineering &amp; MLOps</h3>
-<p>Pipelines, procesos reproducibles, automatización, cloud y operación de soluciones de datos.</p>
+<p data-i18n="spec3D">Pipelines, procesos reproducibles, automatización, cloud y operación de soluciones de datos.</p>
 </article>
 <article class="portfolio-card">
 <h3>AI Safety &amp; Cybersecurity</h3>
-<p>Gobierno de datos e IA, calidad, seguridad y ciberseguridad aplicada a sistemas de inteligencia artificial.</p>
+<p data-i18n="spec4D">Gobierno de datos e IA, calidad, seguridad y ciberseguridad aplicada a sistemas de inteligencia artificial.</p>
 </article>
 </div>
 </section>
 <section id="howiwork" aria-labelledby="howiworkTitle">
-<h2 id="howiworkTitle">Cómo trabajo</h2>
-<p id="howiworkText">Del problema y los datos a soluciones medibles, explicables y listas para usar.</p>
+<h2 id="howiworkTitle" data-i18n="howiworkTitle">Cómo trabajo</h2>
+<p id="howiworkText" data-i18n="howiworkText">Del problema y los datos a soluciones medibles, explicables y listas para usar.</p>
 <div class="portfolio-grid">
 <article class="portfolio-card">
-<h3>Modelos aplicados</h3>
-<p>Problemas de clasificación, predicción y análisis estadístico con métricas y resultados comunicables.</p>
+<h3 data-i18n="how1T">Modelos aplicados</h3>
+<p data-i18n="how1D">Problemas de clasificación, predicción y análisis estadístico con métricas y resultados comunicables.</p>
 </article>
 <article class="portfolio-card">
-<h3>Automatización y pipelines</h3>
-<p>Flujos de datos reproducibles que reducen tareas manuales y mejoran la trazabilidad.</p>
+<h3 data-i18n="how2T">Automatización y pipelines</h3>
+<p data-i18n="how2D">Flujos de datos reproducibles que reducen tareas manuales y mejoran la trazabilidad.</p>
 </article>
 <article class="portfolio-card">
-<h3>Evaluación y métricas</h3>
-<p>Seguimiento de calidad y desempeño de modelos con métricas claras, trazables y comunicables a negocio.</p>
+<h3 data-i18n="how3T">Evaluación y métricas</h3>
+<p data-i18n="how3D">Seguimiento de calidad y desempeño de modelos con métricas claras, trazables y comunicables a negocio.</p>
 </article>
 <article class="portfolio-card">
-<h3>Documentación y entrega</h3>
-<p>Entregables claros, documentados y listos para producción, pensados para que el equipo los pueda mantener.</p>
+<h3 data-i18n="how4T">Documentación y entrega</h3>
+<p data-i18n="how4D">Entregables claros, documentados y listos para producción, pensados para que el equipo los pueda mantener.</p>
 </article>
 </div>
 </section>
@@ -564,8 +564,8 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <div class="portfolio-grid">
 
 <article class="portfolio-card">
-<h3>Detección de patentes y rostros en el borde (Edge AI)</h3>
-<p>Sistema de videovigilancia inteligente sobre 2 cámaras IP conectadas a un DVR Dahua, con inferencia on-device en una Raspberry Pi 4 de 1GB de RAM. Incluye un LLM con fine-tuning para interpretar y corregir las lecturas de matrículas detectadas. Todo el pipeline de visión y el modelo de lenguaje corren optimizados para las limitaciones extremas de memoria del hardware.</p>
+<h3 data-i18n="p1T">Detección de patentes y rostros en el borde (Edge AI)</h3>
+<p data-i18n="p1D">Sistema de videovigilancia inteligente sobre 2 cámaras IP conectadas a un DVR Dahua, con inferencia on-device en una Raspberry Pi 4 de 1GB de RAM. Incluye un LLM con fine-tuning para interpretar y corregir las lecturas de matrículas detectadas. Todo el pipeline de visión y el modelo de lenguaje corren optimizados para las limitaciones extremas de memoria del hardware.</p>
 <div>
 <span class="tag">Computer Vision</span>
 <span class="tag">Edge AI</span>
@@ -573,25 +573,25 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <span class="tag">RTSP</span>
 <span class="tag">Fine-tuning LLM</span>
 <span class="tag">OCR</span>
-<span class="tag">Reconocimiento facial</span>
+<span class="tag" data-i18n="tagFace">Reconocimiento facial</span>
 </div>
 </article>
 
 <article class="portfolio-card">
-<h3>Clasificador de residuos</h3>
-<p>Modelo de Computer Vision para clasificar residuos por tipo de material y automatizar la separación en el proceso de reciclaje, entrenado con dataset propio. Actualmente en proceso de adaptación a una Raspberry Pi, para operar como solución embebida de bajo costo en el punto de descarte.</p>
+<h3 data-i18n="p2T">Clasificador de residuos</h3>
+<p data-i18n="p2D">Modelo de Computer Vision para clasificar residuos por tipo de material y automatizar la separación en el proceso de reciclaje, entrenado con dataset propio. Actualmente en proceso de adaptación a una Raspberry Pi, para operar como solución embebida de bajo costo en el punto de descarte.</p>
 <div>
 <span class="tag">Computer Vision</span>
 <span class="tag">Edge AI</span>
 <span class="tag">Raspberry Pi</span>
-<span class="tag">Clasificación de imágenes</span>
-<span class="tag">Sustentabilidad</span>
+<span class="tag" data-i18n="tagImgClass">Clasificación de imágenes</span>
+<span class="tag" data-i18n="tagSustain">Sustentabilidad</span>
 </div>
 </article>
 
 <article class="portfolio-card">
-<h3>Estimación de precios de alquiler — CABA y Mendoza</h3>
-<p>Modelo predictivo de precios de alquiler en Capital Federal (Argentina) y Mendoza, con datos propios obtenidos mediante scraping de Properati y ZonaProp. Incorpora análisis GIS para capturar el efecto de la ubicación (barrio, cercanía a servicios, zonas) sobre el precio, comparando el comportamiento del mercado inmobiliario entre ambas regiones.</p>
+<h3 data-i18n="p3T">Estimación de precios de alquiler — CABA y Mendoza</h3>
+<p data-i18n="p3D">Modelo predictivo de precios de alquiler en Capital Federal (Argentina) y Mendoza, con datos propios obtenidos mediante scraping de Properati y ZonaProp. Incorpora análisis GIS para capturar el efecto de la ubicación (barrio, cercanía a servicios, zonas) sobre el precio, comparando el comportamiento del mercado inmobiliario entre ambas regiones.</p>
 <div>
 <span class="tag">Regression</span>
 <span class="tag">Real Estate</span>
@@ -603,8 +603,8 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </article>
 
 <article class="portfolio-card">
-<h3>Detector de somnolencia</h3>
-<p>Sistema de Computer Vision que monitorea en tiempo real indicadores como cierre prolongado de ojos y bostezos para detectar somnolencia y emitir alertas tempranas, orientado a prevención de accidentes en contextos de conducción u operación de maquinaria. Entrenado con dataset propio.</p>
+<h3 data-i18n="p4T">Detector de somnolencia</h3>
+<p data-i18n="p4D">Sistema de Computer Vision que monitorea en tiempo real indicadores como cierre prolongado de ojos y bostezos para detectar somnolencia y emitir alertas tempranas, orientado a prevención de accidentes en contextos de conducción u operación de maquinaria. Entrenado con dataset propio.</p>
 <div>
 <span class="tag">Computer Vision</span>
 <span class="tag">Real-time</span>
@@ -614,8 +614,8 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </article>
 
 <article class="portfolio-card">
-<h3>Detector de emociones con Computer Vision</h3>
-<p>Sistema de reconocimiento de emociones faciales en tiempo real a partir de video, entrenado con dataset propio, clasificando estados emocionales para casos de uso de análisis de experiencia de usuario o monitoreo de atención.</p>
+<h3 data-i18n="p5T">Detector de emociones con Computer Vision</h3>
+<p data-i18n="p5D">Sistema de reconocimiento de emociones faciales en tiempo real a partir de video, entrenado con dataset propio, clasificando estados emocionales para casos de uso de análisis de experiencia de usuario o monitoreo de atención.</p>
 <div>
 <span class="tag">Computer Vision</span>
 <span class="tag">Emotion Recognition</span>
@@ -625,19 +625,19 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 </article>
 
 <article class="portfolio-card">
-<h3>Predicción de churn</h3>
-<p>Modelo de clasificación para anticipar la baja de clientes, entrenado sobre dataset propio, con foco en explicabilidad de las variables que más influyen en la decisión, para que el equipo de negocio pueda accionar retención antes de que ocurra la pérdida.</p>
+<h3 data-i18n="p6T">Predicción de churn</h3>
+<p data-i18n="p6D">Modelo de clasificación para anticipar la baja de clientes, entrenado sobre dataset propio, con foco en explicabilidad de las variables que más influyen en la decisión, para que el equipo de negocio pueda accionar retención antes de que ocurra la pérdida.</p>
 <div>
 <span class="tag">Churn Prediction</span>
-<span class="tag">Clasificación</span>
+<span class="tag" data-i18n="tagClass">Clasificación</span>
 <span class="tag">Explainability</span>
 <span class="tag">Scikit-learn</span>
 </div>
 </article>
 
 <article class="portfolio-card">
-<h3>Sistema de recomendación para e-commerce a gran escala</h3>
-<p>Motor de recomendación híbrido que combina filtrado colaborativo (comportamiento de usuarios similares) con recomendación basada en contenido (atributos de producto), entrenado sobre dataset propio y diseñado para operar sobre grandes volúmenes de datos y catálogos extensos sin perder performance ni relevancia frente a usuarios nuevos.</p>
+<h3 data-i18n="p7T">Sistema de recomendación para e-commerce a gran escala</h3>
+<p data-i18n="p7D">Motor de recomendación híbrido que combina filtrado colaborativo (comportamiento de usuarios similares) con recomendación basada en contenido (atributos de producto), entrenado sobre dataset propio y diseñado para operar sobre grandes volúmenes de datos y catálogos extensos sin perder performance ni relevancia frente a usuarios nuevos.</p>
 <div>
 <span class="tag">Recommender Systems</span>
 <span class="tag">Collaborative Filtering</span>
@@ -684,8 +684,8 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
 </div>
 <div class="resource-body">
-<div class="resource-name" id="resourceStudentsName">Repositorio para alumnos</div>
-<div class="resource-desc" id="resourceStudentsDesc">Notebooks, guías y ejercicios de Data Science y Machine Learning.</div>
+<div class="resource-name" id="resourceStudentsName" data-i18n="resourceStudentsName">Repositorio para alumnos</div>
+<div class="resource-desc" id="resourceStudentsDesc" data-i18n="resourceStudentsDesc">Notebooks, guías y ejercicios de Data Science y Machine Learning.</div>
 </div>
 </a>
 <a class="resource-card" href="https://github.com/luchoxiii" target="_blank" rel="noopener noreferrer">
@@ -693,8 +693,8 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
 </div>
 <div class="resource-body">
-<div class="resource-name" id="resourceProfileName">Mi perfil de GitHub</div>
-<div class="resource-desc" id="resourceProfileDesc">Proyectos personales, experimentos y contribuciones públicas.</div>
+<div class="resource-name" id="resourceProfileName" data-i18n="resourceProfileName">Mi perfil de GitHub</div>
+<div class="resource-desc" id="resourceProfileDesc" data-i18n="resourceProfileDesc">Proyectos personales, experimentos y contribuciones públicas.</div>
 </div>
 </a>
 </div>
@@ -703,7 +703,7 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 <h2 id="contactTitle">Contacto profesional</h2>
 <p id="contactText1">Estoy disponible para oportunidades laborales, proyectos de consultoría, colaboración académica o iniciativas relacionadas con Data Science, Machine Learning y automatización.</p>
 <p id="contactText2">Para consultas profesionales, propuestas laborales o networking técnico, puede contactarme a través del siguiente correo electrónico:</p>
-<a class="github" id="contactMailLink" href="#" rel="nofollow" data-mail-enc="101,97,103,108,101,98,108,117,101,57,49,64,103,109,97,105,108,46,99,111,109">Enviar correo profesional</a>
+<a class="github" id="contactMailLink" data-i18n="contactMailLink" href="#" rel="nofollow" data-mail-enc="101,97,103,108,101,98,108,117,101,57,49,64,103,109,97,105,108,46,99,111,109">Enviar correo profesional</a>
 <noscript><p style="margin-top:10px;font-size:.85rem">eagleblue91 [arroba] gmail [punto] com</p></noscript>
 <p id="contactText3" style="margin-top:12px;font-size:.85rem;color:var(--muted)">Tiempo de respuesta estimado: 24-48 horas.</p>
 </section>
@@ -784,10 +784,10 @@ localPlatform:"Ko-fi"
 const extras={
 es:{navFeatured:"Destacados",featuredTitle:"Trabajo destacado",featuredText:"Una selección de publicaciones, pósters y casos de estudio.",posterTitle:"Mortalidad intrahospitalaria en pacientes con VIH y tuberculosis",posterText:"Análisis de factores asociados. Póster científico presentado junto al equipo del Hospital Posadas y SADI.",posterLink:"Ver póster completo",posterMissing:"Próximamente disponible.",caseStudyTitle:"Casos de estudio",caseStudyText:"Acá voy a compartir proyectos aplicados, métodos y resultados reproducibles.",paypalText:"Donación internacional segura.",paypalLink:"Donar con PayPal",localSupportTitle:"Ko-fi",localSupportText:"Podés colaborar con el desarrollo de nuevos recursos y proyectos.",localSupportLink:"Invitarme un café",supportMissing:"Los enlaces de donación se habilitarán cuando se configure cada perfil.",certVerify:"Verificar credencial",certSoon:"Emisión próxima"},
 en:{navFeatured:"Featured",featuredTitle:"Featured work",featuredText:"A selection of publications, posters and case studies.",posterTitle:"In-hospital mortality in patients with HIV and tuberculosis",posterText:"Analysis of associated factors. Scientific poster presented with the Hospital Posadas and SADI team.",posterLink:"View full poster",posterMissing:"Coming soon.",caseStudyTitle:"Case studies",caseStudyText:"I will share applied projects, methods and reproducible results here.",paypalText:"Secure international donation.",paypalLink:"Donate with PayPal",localSupportTitle:"Ko-fi",localSupportText:"You can support the development of new resources and projects.",localSupportLink:"Buy me a coffee",supportMissing:"Donation links will be enabled once each profile is configured.",certVerify:"Verify credential",certSoon:"Coming soon"},
-pt:{navFeatured:"Destaques",featuredTitle:"Trabalho em destaque",featuredText:"Uma seleção de publicações, pôsteres e estudos de caso.",posterTitle:"Pôster científico",posterText:"Publicação científica sobre análise e ciência de dados.",posterLink:"Ver pôster",posterMissing:"Em breve.",caseStudyTitle:"Estudos de caso",caseStudyText:"Vou compartilhar aqui projetos aplicados, métodos e resultados reproduzíveis.",paypalText:"Doação internacional segura.",localSupportTitle:"Apoio local",localSupportText:"Plataforma local de doações.",localSupportLink:"Apoiar o projeto",supportMissing:"Os links de doação serão ativados quando cada perfil for configurado.",certVerify:"Verificar credencial",certSoon:"Em breve"},
-fr:{navFeatured:"À la une",featuredTitle:"Travail à la une",featuredText:"Une sélection de publications, affiches et études de cas.",posterTitle:"Affiche scientifique",posterText:"Publication scientifique sur l'analyse et la science des données.",posterLink:"Voir l'affiche",posterMissing:"Bientôt disponible.",caseStudyTitle:"Études de cas",caseStudyText:"Je partagerai ici des projets appliqués, des méthodes et des résultats reproductibles.",paypalText:"Don international sécurisé.",paypalLink:"Faire un don avec PayPal",localSupportTitle:"Soutien local",localSupportText:"Plateforme locale de dons.",localSupportLink:"Soutenir le projet",supportMissing:"Les liens de don seront activés lorsque chaque profil sera configuré.",certVerify:"Vérifier le justificatif",certSoon:"Bientôt disponible"},
-it:{navFeatured:"In evidenza",featuredTitle:"Lavoro in evidenza",featuredText:"Una selezione di pubblicazioni, poster e casi di studio.",posterTitle:"Poster scientifico",posterText:"Pubblicazione scientifica su analisi e scienza dei dati.",posterLink:"Vedi il poster",posterMissing:"Prossimamente.",caseStudyTitle:"Casi di studio",caseStudyText:"Condividerò qui progetti applicati, metodi e risultati riproducibili.",paypalText:"Donazione internazionale sicura.",localSupportTitle:"Supporto locale",localSupportText:"Piattaforma locale per donazioni.",localSupportLink:"Sostieni il progetto",supportMissing:"I link per le donazioni saranno attivati quando ogni profilo sarà configurato.",certVerify:"Verifica credenziale",certSoon:"Prossimamente"},
-de:{navFeatured:"Highlights",featuredTitle:"Ausgewählte Arbeit",featuredText:"Eine Auswahl an Veröffentlichungen, Postern und Fallstudien.",posterTitle:"Wissenschaftliches Poster",posterText:"Wissenschaftliche Veröffentlichung über Datenanalyse und Data Science.",posterLink:"Poster ansehen",posterMissing:"Demnächst verfügbar.",caseStudyTitle:"Fallstudien",caseStudyText:"Hier teile ich angewandte Projekte, Methoden und reproduzierbare Ergebnisse.",paypalText:"Sichere internationale Spende.",localSupportTitle:"Lokale Unterstützung",localSupportText:"Lokale Spendenplattform.",localSupportLink:"Projekt unterstützen",supportMissing:"Spendenlinks werden aktiviert, sobald jedes Profil eingerichtet ist.",certVerify:"Zertifikat verifizieren",certSoon:"Demnächst"}
+pt:{navFeatured:"Destaques",featuredTitle:"Trabalho em destaque",featuredText:"Uma seleção de publicações, pôsteres e estudos de caso.",posterTitle:"Mortalidade intra-hospitalar em pacientes com HIV e tuberculose",posterText:"Análise de fatores associados. Pôster científico apresentado com a equipe do Hospital Posadas e da SADI.",posterLink:"Ver pôster",posterMissing:"Em breve.",caseStudyTitle:"Estudos de caso",caseStudyText:"Vou compartilhar aqui projetos aplicados, métodos e resultados reproduzíveis.",paypalText:"Doação internacional segura.",localSupportTitle:"Apoio local",localSupportText:"Plataforma local de doações.",localSupportLink:"Apoiar o projeto",supportMissing:"Os links de doação serão ativados quando cada perfil for configurado.",certVerify:"Verificar credencial",certSoon:"Em breve"},
+fr:{navFeatured:"À la une",featuredTitle:"Travail à la une",featuredText:"Une sélection de publications, affiches et études de cas.",posterTitle:"Mortalité hospitalière chez les patients atteints du VIH et de tuberculose",posterText:"Analyse des facteurs associés. Affiche scientifique présentée avec l'équipe de l'Hôpital Posadas et de la SADI.",posterLink:"Voir l'affiche",posterMissing:"Bientôt disponible.",caseStudyTitle:"Études de cas",caseStudyText:"Je partagerai ici des projets appliqués, des méthodes et des résultats reproductibles.",paypalText:"Don international sécurisé.",paypalLink:"Faire un don avec PayPal",localSupportTitle:"Soutien local",localSupportText:"Plateforme locale de dons.",localSupportLink:"Soutenir le projet",supportMissing:"Les liens de don seront activés lorsque chaque profil sera configuré.",certVerify:"Vérifier le justificatif",certSoon:"Bientôt disponible"},
+it:{navFeatured:"In evidenza",featuredTitle:"Lavoro in evidenza",featuredText:"Una selezione di pubblicazioni, poster e casi di studio.",posterTitle:"Mortalità intraospedaliera in pazienti con HIV e tubercolosi",posterText:"Analisi dei fattori associati. Poster scientifico presentato con il team dell'Ospedale Posadas e della SADI.",posterLink:"Vedi il poster",posterMissing:"Prossimamente.",caseStudyTitle:"Casi di studio",caseStudyText:"Condividerò qui progetti applicati, metodi e risultati riproducibili.",paypalText:"Donazione internazionale sicura.",localSupportTitle:"Supporto locale",localSupportText:"Piattaforma locale per donazioni.",localSupportLink:"Sostieni il progetto",supportMissing:"I link per le donazioni saranno attivati quando ogni profilo sarà configurato.",certVerify:"Verifica credenziale",certSoon:"Prossimamente"},
+de:{navFeatured:"Highlights",featuredTitle:"Ausgewählte Arbeit",featuredText:"Eine Auswahl an Veröffentlichungen, Postern und Fallstudien.",posterTitle:"Krankenhausmortalität bei Patienten mit HIV und Tuberkulose",posterText:"Analyse assoziierter Faktoren. Wissenschaftliches Poster, präsentiert mit dem Team des Hospital Posadas und der SADI.",posterLink:"Poster ansehen",posterMissing:"Demnächst verfügbar.",caseStudyTitle:"Fallstudien",caseStudyText:"Hier teile ich angewandte Projekte, Methoden und reproduzierbare Ergebnisse.",paypalText:"Sichere internationale Spende.",localSupportTitle:"Lokale Unterstützung",localSupportText:"Lokale Spendenplattform.",localSupportLink:"Projekt unterstützen",supportMissing:"Spendenlinks werden aktiviert, sobald jedes Profil eingerichtet ist.",certVerify:"Zertifikat verifizieren",certSoon:"Demnächst"}
 }
 
 const content={
@@ -813,7 +813,7 @@ Más de 3 años como docente en Data Science y Machine Learning, además de expe
 certTitle:"Certificaciones",
 certText:"Formación y certificaciones en Data Science, Machine Learning, Cloud y Ciberseguridad.",
 projectsTitle:"Proyectos",
-projectsText:"Proyectos profesionales próximamente disponibles.",
+projectsText:"Proyectos aplicados end-to-end: desde el problema de negocio hasta el modelo en producción.",
 resourcesTitle:"Recursos para alumnos",
 resourcesText:"Material educativo, guías y notebooks disponibles en GitHub.",
 githubTitle:"GitHub",
@@ -847,7 +847,7 @@ Over 3 years as a teacher in Data Science and Machine Learning, plus experience 
 certTitle:"Certifications",
 certText:"Training and certifications in Data Science, Machine Learning, Cloud and Cybersecurity.",
 projectsTitle:"Projects",
-projectsText:"Professional projects coming soon.",
+projectsText:"End-to-end applied projects: from the business problem to the model in production.",
 resourcesTitle:"Resources for students",
 resourcesText:"Educational material, guides and notebooks available on GitHub.",
 githubTitle:"GitHub",
@@ -881,7 +881,7 @@ Mais de 3 anos como professor em Data Science e Machine Learning, além de exper
 certTitle:"Certificações",
 certText:"Formação e certificações em Data Science, Machine Learning, Cloud e Cibersegurança.",
 projectsTitle:"Projetos",
-projectsText:"Projetos profissionais em breve.",
+projectsText:"Projetos aplicados end-to-end: do problema de negócio ao modelo em produção.",
 resourcesTitle:"Recursos para alumnos",
 resourcesText:"Material educativo, guias e notebooks disponíveis no GitHub.",
 githubTitle:"GitHub",
@@ -915,7 +915,7 @@ Plus de 3 ans comme enseignant en Data Science et Machine Learning, en plus d'un
 certTitle:"Certifications",
 certText:"Formation et certifications en Data Science, Machine Learning, Cloud et Cybersécurité.",
 projectsTitle:"Projets",
-projectsText:"Projets professionnels bientôt disponibles.",
+projectsText:"Projets appliqués de bout en bout : du problème métier au modèle en production.",
 resourcesTitle:"Ressources pour étudiants",
 resourcesText:"Matériel éducatif, guides et notebooks disponibles sur GitHub.",
 githubTitle:"GitHub",
@@ -949,7 +949,7 @@ Più di 3 anni come docente in Data Science e Machine Learning, oltre a esperien
 certTitle:"Certificazioni",
 certText:"Formazione e certificazioni in Data Science, Machine Learning, Cloud e Cybersecurity.",
 projectsTitle:"Progetti",
-projectsText:"Progetti professionali disponibili a breve.",
+projectsText:"Progetti applicati end-to-end: dal problema di business al modello in produzione.",
 resourcesTitle:"Risorse per studenti",
 resourcesText:"Materiale didattico, guide e notebook disponibili su GitHub.",
 githubTitle:"GitHub",
@@ -983,7 +983,7 @@ Mehr als 3 Jahre als Dozent in Data Science und Machine Learning, sowie Erfahrun
 certTitle:"Zertifizierungen",
 certText:"Weiterbildung und Zertifizierungen in Data Science, Machine Learning, Cloud und Cybersicherheit.",
 projectsTitle:"Projekte",
-projectsText:"Professionelle Projekte bald verfügbar.",
+projectsText:"Angewandte End-to-End-Projekte: vom Geschäftsproblem bis zum Modell in Produktion.",
 resourcesTitle:"Ressourcen für Studenten",
 resourcesText:"Lehrmaterial, Anleitungen und Notebooks auf GitHub verfügbar.",
 githubTitle:"GitHub",
@@ -995,6 +995,277 @@ contactText3:"Geschätzte Antwortzeit: 24-48 Stunden.",
 supportTitle:"Beiträge oder Spenden",
 supportText:"Wenn meine Inhalte oder Projekte Ihnen helfen, können Sie die Entwicklung neuer Ressourcen unterstützen."
 }
+}
+
+// Textos de secciones que antes no se traducían (Especialidades, Cómo trabajo,
+// Proyectos, Recursos, etc.). Cada elemento con data-i18n="clave" toma su texto
+// de acá; data-i18n-alt="clave" traduce el texto alternativo de una imagen.
+// Para agregar un texto nuevo: poné data-i18n en el HTML y la clave en los 6 idiomas.
+const i18n={
+ "es": {
+  "navSpecialties": "Especialidades",
+  "navHowIWork": "Cómo trabajo",
+  "specialtiesTitle": "Especialidades",
+  "specialtiesText": "Tecnología aplicada con una mirada de producto, reproducibilidad y uso responsable.",
+  "spec1D": "Modelos predictivos, analítica avanzada, Deep Learning y visualización para decisiones basadas en datos.",
+  "spec2D": "LLMs, agentes de IA, automatización, evaluación y diseño de flujos de trabajo asistidos por IA.",
+  "spec3D": "Pipelines, procesos reproducibles, automatización, cloud y operación de soluciones de datos.",
+  "spec4D": "Gobierno de datos e IA, calidad, seguridad y ciberseguridad aplicada a sistemas de inteligencia artificial.",
+  "howiworkTitle": "Cómo trabajo",
+  "howiworkText": "Del problema y los datos a soluciones medibles, explicables y listas para usar.",
+  "how1T": "Modelos aplicados",
+  "how1D": "Problemas de clasificación, predicción y análisis estadístico con métricas y resultados comunicables.",
+  "how2T": "Automatización y pipelines",
+  "how2D": "Flujos de datos reproducibles que reducen tareas manuales y mejoran la trazabilidad.",
+  "how3T": "Evaluación y métricas",
+  "how3D": "Seguimiento de calidad y desempeño de modelos con métricas claras, trazables y comunicables a negocio.",
+  "how4T": "Documentación y entrega",
+  "how4D": "Entregables claros, documentados y listos para producción, pensados para que el equipo los pueda mantener.",
+  "p1T": "Detección de patentes y rostros en el borde (Edge AI)",
+  "p1D": "Sistema de videovigilancia inteligente sobre 2 cámaras IP conectadas a un DVR Dahua, con inferencia on-device en una Raspberry Pi 4 de 1GB de RAM. Incluye un LLM con fine-tuning para interpretar y corregir las lecturas de matrículas detectadas. Todo el pipeline de visión y el modelo de lenguaje corren optimizados para las limitaciones extremas de memoria del hardware.",
+  "tagFace": "Reconocimiento facial",
+  "p2T": "Clasificador de residuos",
+  "p2D": "Modelo de Computer Vision para clasificar residuos por tipo de material y automatizar la separación en el proceso de reciclaje, entrenado con dataset propio. Actualmente en proceso de adaptación a una Raspberry Pi, para operar como solución embebida de bajo costo en el punto de descarte.",
+  "tagImgClass": "Clasificación de imágenes",
+  "tagSustain": "Sustentabilidad",
+  "p3T": "Estimación de precios de alquiler — CABA y Mendoza",
+  "p3D": "Modelo predictivo de precios de alquiler en Capital Federal (Argentina) y Mendoza, con datos propios obtenidos mediante scraping de Properati y ZonaProp. Incorpora análisis GIS para capturar el efecto de la ubicación (barrio, cercanía a servicios, zonas) sobre el precio, comparando el comportamiento del mercado inmobiliario entre ambas regiones.",
+  "p4T": "Detector de somnolencia",
+  "p4D": "Sistema de Computer Vision que monitorea en tiempo real indicadores como cierre prolongado de ojos y bostezos para detectar somnolencia y emitir alertas tempranas, orientado a prevención de accidentes en contextos de conducción u operación de maquinaria. Entrenado con dataset propio.",
+  "p5T": "Detector de emociones con Computer Vision",
+  "p5D": "Sistema de reconocimiento de emociones faciales en tiempo real a partir de video, entrenado con dataset propio, clasificando estados emocionales para casos de uso de análisis de experiencia de usuario o monitoreo de atención.",
+  "p6T": "Predicción de churn",
+  "p6D": "Modelo de clasificación para anticipar la baja de clientes, entrenado sobre dataset propio, con foco en explicabilidad de las variables que más influyen en la decisión, para que el equipo de negocio pueda accionar retención antes de que ocurra la pérdida.",
+  "tagClass": "Clasificación",
+  "p7T": "Sistema de recomendación para e-commerce a gran escala",
+  "p7D": "Motor de recomendación híbrido que combina filtrado colaborativo (comportamiento de usuarios similares) con recomendación basada en contenido (atributos de producto), entrenado sobre dataset propio y diseñado para operar sobre grandes volúmenes de datos y catálogos extensos sin perder performance ni relevancia frente a usuarios nuevos.",
+  "resourceStudentsName": "Repositorio para alumnos",
+  "resourceStudentsDesc": "Notebooks, guías y ejercicios de Data Science y Machine Learning.",
+  "resourceProfileName": "Mi perfil de GitHub",
+  "resourceProfileDesc": "Proyectos personales, experimentos y contribuciones públicas.",
+  "contactMailLink": "Enviar correo profesional",
+  "avatarAlt": "Foto de Lucho"
+ },
+ "en": {
+  "navSpecialties": "Specialties",
+  "navHowIWork": "How I work",
+  "avatarAlt": "Photo of Lucho",
+  "specialtiesTitle": "Specialties",
+  "specialtiesText": "Applied technology with a focus on product thinking, reproducibility and responsible use.",
+  "spec1D": "Predictive models, advanced analytics, Deep Learning and visualization for data-driven decisions.",
+  "spec2D": "LLMs, AI agents, automation, evaluation and design of AI-assisted workflows.",
+  "spec3D": "Pipelines, reproducible processes, automation, cloud and operation of data solutions.",
+  "spec4D": "Data and AI governance, quality, security and cybersecurity applied to artificial intelligence systems.",
+  "howiworkTitle": "How I work",
+  "howiworkText": "From the problem and the data to measurable, explainable, ready-to-use solutions.",
+  "how1T": "Applied models",
+  "how1D": "Classification, prediction and statistical analysis problems with clear metrics and easy-to-communicate results.",
+  "how2T": "Automation and pipelines",
+  "how2D": "Reproducible data flows that reduce manual work and improve traceability.",
+  "how3T": "Evaluation and metrics",
+  "how3D": "Monitoring of model quality and performance with clear, traceable metrics that business teams can understand.",
+  "how4T": "Documentation and delivery",
+  "how4D": "Clear, documented, production-ready deliverables, designed so the team can maintain them.",
+  "p1T": "License plate and face detection at the edge (Edge AI)",
+  "p1D": "Smart video surveillance system using 2 IP cameras connected to a Dahua DVR, with on-device inference on a Raspberry Pi 4 with 1 GB of RAM. It includes a fine-tuned LLM that interprets and corrects the detected license plate readings. The entire vision pipeline and the language model are optimized to run within the hardware's extreme memory constraints.",
+  "p2T": "Waste classifier",
+  "p2D": "Computer Vision model that classifies waste by material type to automate sorting in the recycling process, trained on a custom dataset. Currently being adapted to a Raspberry Pi to run as a low-cost embedded solution at the point of disposal.",
+  "p3T": "Rental price estimation — Buenos Aires City and Mendoza",
+  "p3D": "Predictive model for rental prices in Buenos Aires City (Argentina) and Mendoza, built on custom data scraped from Properati and ZonaProp. It incorporates GIS analysis to capture the effect of location (neighborhood, proximity to services, zones) on price, comparing how the real estate market behaves in both regions.",
+  "p4T": "Drowsiness detector",
+  "p4D": "Computer Vision system that monitors indicators such as prolonged eye closure and yawning in real time to detect drowsiness and issue early alerts, aimed at preventing accidents while driving or operating machinery. Trained on a custom dataset.",
+  "p5T": "Emotion detection with Computer Vision",
+  "p5D": "Real-time facial emotion recognition system from video, trained on a custom dataset, classifying emotional states for use cases such as user experience analysis or attention monitoring.",
+  "p6T": "Churn prediction",
+  "p6D": "Classification model to anticipate customer churn, trained on a custom dataset, with a focus on explaining which variables most influence the outcome so the business team can take retention actions before the loss happens.",
+  "p7T": "Large-scale e-commerce recommendation system",
+  "p7D": "Hybrid recommendation engine that combines collaborative filtering (behavior of similar users) with content-based recommendation (product attributes), trained on a custom dataset and designed to handle large data volumes and extensive catalogs without losing performance or relevance for new users.",
+  "tagClass": "Classification",
+  "tagFace": "Face recognition",
+  "tagImgClass": "Image classification",
+  "tagSustain": "Sustainability",
+  "resourceStudentsName": "Repository for students",
+  "resourceStudentsDesc": "Notebooks, guides and exercises on Data Science and Machine Learning.",
+  "resourceProfileName": "My GitHub profile",
+  "resourceProfileDesc": "Personal projects, experiments and public contributions.",
+  "contactMailLink": "Send a professional email"
+ },
+ "pt": {
+  "navSpecialties": "Especialidades",
+  "navHowIWork": "Como trabalho",
+  "avatarAlt": "Foto de Lucho",
+  "specialtiesTitle": "Especialidades",
+  "specialtiesText": "Tecnologia aplicada com visão de produto, reprodutibilidade e uso responsável.",
+  "spec1D": "Modelos preditivos, analytics avançada, Deep Learning e visualização para decisões baseadas em dados.",
+  "spec2D": "LLMs, agentes de IA, automação, avaliação e design de fluxos de trabalho assistidos por IA.",
+  "spec3D": "Pipelines, processos reproduzíveis, automação, cloud e operação de soluções de dados.",
+  "spec4D": "Governança de dados e IA, qualidade, segurança e cibersegurança aplicadas a sistemas de inteligência artificial.",
+  "howiworkTitle": "Como trabalho",
+  "howiworkText": "Do problema e dos dados a soluções mensuráveis, explicáveis e prontas para uso.",
+  "how1T": "Modelos aplicados",
+  "how1D": "Problemas de classificação, predição e análise estatística com métricas e resultados fáceis de comunicar.",
+  "how2T": "Automação e pipelines",
+  "how2D": "Fluxos de dados reproduzíveis que reduzem tarefas manuais e melhoram a rastreabilidade.",
+  "how3T": "Avaliação e métricas",
+  "how3D": "Acompanhamento da qualidade e do desempenho dos modelos com métricas claras, rastreáveis e comunicáveis ao negócio.",
+  "how4T": "Documentação e entrega",
+  "how4D": "Entregáveis claros, documentados e prontos para produção, pensados para que a equipe possa mantê-los.",
+  "p1T": "Detecção de placas e rostos na borda (Edge AI)",
+  "p1D": "Sistema inteligente de videomonitoramento com 2 câmeras IP conectadas a um DVR Dahua, com inferência on-device em um Raspberry Pi 4 com 1 GB de RAM. Inclui um LLM com fine-tuning para interpretar e corrigir as leituras de placas detectadas. Todo o pipeline de visão e o modelo de linguagem rodam otimizados para as limitações extremas de memória do hardware.",
+  "p2T": "Classificador de resíduos",
+  "p2D": "Modelo de Computer Vision que classifica resíduos por tipo de material para automatizar a separação no processo de reciclagem, treinado com dataset próprio. Atualmente em adaptação para um Raspberry Pi, para operar como solução embarcada de baixo custo no ponto de descarte.",
+  "p3T": "Estimativa de preços de aluguel — Buenos Aires e Mendoza",
+  "p3D": "Modelo preditivo de preços de aluguel na Cidade de Buenos Aires (Argentina) e em Mendoza, com dados próprios obtidos por scraping do Properati e do ZonaProp. Incorpora análise GIS para capturar o efeito da localização (bairro, proximidade de serviços, zonas) sobre o preço, comparando o comportamento do mercado imobiliário entre as duas regiões.",
+  "p4T": "Detector de sonolência",
+  "p4D": "Sistema de Computer Vision que monitora em tempo real indicadores como fechamento prolongado dos olhos e bocejos para detectar sonolência e emitir alertas precoces, voltado à prevenção de acidentes na direção de veículos ou na operação de máquinas. Treinado com dataset próprio.",
+  "p5T": "Detector de emoções com Computer Vision",
+  "p5D": "Sistema de reconhecimento de emoções faciais em tempo real a partir de vídeo, treinado com dataset próprio, que classifica estados emocionais para casos de uso como análise de experiência do usuário ou monitoramento de atenção.",
+  "p6T": "Predição de churn",
+  "p6D": "Modelo de classificação para antecipar o cancelamento de clientes, treinado com dataset próprio, com foco na explicabilidade das variáveis que mais influenciam a decisão, para que a equipe de negócio possa agir na retenção antes que a perda aconteça.",
+  "p7T": "Sistema de recomendação para e-commerce em grande escala",
+  "p7D": "Motor de recomendação híbrido que combina filtragem colaborativa (comportamento de usuários semelhantes) com recomendação baseada em conteúdo (atributos do produto), treinado com dataset próprio e projetado para operar sobre grandes volumes de dados e catálogos extensos sem perder desempenho nem relevância para novos usuários.",
+  "tagClass": "Classificação",
+  "tagFace": "Reconhecimento facial",
+  "tagImgClass": "Classificação de imagens",
+  "tagSustain": "Sustentabilidade",
+  "resourceStudentsName": "Repositório para alunos",
+  "resourceStudentsDesc": "Notebooks, guias e exercícios de Data Science e Machine Learning.",
+  "resourceProfileName": "Meu perfil no GitHub",
+  "resourceProfileDesc": "Projetos pessoais, experimentos e contribuições públicas.",
+  "contactMailLink": "Enviar e-mail profissional"
+ },
+ "fr": {
+  "navSpecialties": "Spécialités",
+  "navHowIWork": "Ma méthode",
+  "avatarAlt": "Photo de Lucho",
+  "specialtiesTitle": "Spécialités",
+  "specialtiesText": "Une technologie appliquée, pensée produit, reproductible et responsable.",
+  "spec1D": "Modèles prédictifs, analytique avancée, Deep Learning et visualisation pour des décisions fondées sur les données.",
+  "spec2D": "LLM, agents d'IA, automatisation, évaluation et conception de flux de travail assistés par l'IA.",
+  "spec3D": "Pipelines, processus reproductibles, automatisation, cloud et exploitation de solutions de données.",
+  "spec4D": "Gouvernance des données et de l'IA, qualité, sécurité et cybersécurité appliquées aux systèmes d'intelligence artificielle.",
+  "howiworkTitle": "Ma méthode",
+  "howiworkText": "Du problème et des données à des solutions mesurables, explicables et prêtes à l'emploi.",
+  "how1T": "Modèles appliqués",
+  "how1D": "Problèmes de classification, de prédiction et d'analyse statistique, avec des métriques et des résultats faciles à communiquer.",
+  "how2T": "Automatisation et pipelines",
+  "how2D": "Des flux de données reproductibles qui réduisent les tâches manuelles et améliorent la traçabilité.",
+  "how3T": "Évaluation et métriques",
+  "how3D": "Suivi de la qualité et de la performance des modèles avec des métriques claires, traçables et compréhensibles pour le métier.",
+  "how4T": "Documentation et livraison",
+  "how4D": "Des livrables clairs, documentés et prêts pour la production, conçus pour que l'équipe puisse les maintenir.",
+  "p1T": "Détection de plaques d'immatriculation et de visages en périphérie (Edge AI)",
+  "p1D": "Système de vidéosurveillance intelligent sur 2 caméras IP reliées à un DVR Dahua, avec inférence embarquée sur un Raspberry Pi 4 doté de 1 Go de RAM. Il intègre un LLM affiné (fine-tuning) pour interpréter et corriger les lectures de plaques détectées. L'ensemble du pipeline de vision et le modèle de langage sont optimisés pour les contraintes de mémoire extrêmes du matériel.",
+  "p2T": "Classificateur de déchets",
+  "p2D": "Modèle de Computer Vision qui classe les déchets par type de matériau pour automatiser le tri dans le processus de recyclage, entraîné sur un jeu de données propre. En cours d'adaptation sur Raspberry Pi pour fonctionner comme une solution embarquée à faible coût au point de dépôt.",
+  "p3T": "Estimation des loyers — Buenos Aires et Mendoza",
+  "p3D": "Modèle prédictif des loyers dans la ville de Buenos Aires (Argentine) et à Mendoza, à partir de données propres collectées par scraping de Properati et ZonaProp. Il intègre une analyse SIG pour mesurer l'effet de la localisation (quartier, proximité des services, zones) sur le prix et compare le comportement du marché immobilier entre les deux régions.",
+  "p4T": "Détecteur de somnolence",
+  "p4D": "Système de Computer Vision qui surveille en temps réel des indicateurs comme la fermeture prolongée des yeux et les bâillements afin de détecter la somnolence et d'émettre des alertes précoces, pour prévenir les accidents en conduite ou lors de l'utilisation de machines. Entraîné sur un jeu de données propre.",
+  "p5T": "Détecteur d'émotions par Computer Vision",
+  "p5D": "Système de reconnaissance des émotions faciales en temps réel à partir de vidéo, entraîné sur un jeu de données propre, qui classe les états émotionnels pour des cas d'usage comme l'analyse de l'expérience utilisateur ou le suivi de l'attention.",
+  "p6T": "Prédiction du churn",
+  "p6D": "Modèle de classification pour anticiper l'attrition des clients, entraîné sur un jeu de données propre, axé sur l'explicabilité des variables les plus influentes afin que l'équipe métier puisse lancer des actions de fidélisation avant la perte.",
+  "p7T": "Système de recommandation e-commerce à grande échelle",
+  "p7D": "Moteur de recommandation hybride combinant filtrage collaboratif (comportement d'utilisateurs similaires) et recommandation basée sur le contenu (attributs des produits), entraîné sur un jeu de données propre et conçu pour traiter de gros volumes de données et des catalogues étendus sans perdre en performance ni en pertinence pour les nouveaux utilisateurs.",
+  "tagClass": "Classification",
+  "tagFace": "Reconnaissance faciale",
+  "tagImgClass": "Classification d'images",
+  "tagSustain": "Durabilité",
+  "resourceStudentsName": "Dépôt pour les étudiants",
+  "resourceStudentsDesc": "Notebooks, guides et exercices de Data Science et de Machine Learning.",
+  "resourceProfileName": "Mon profil GitHub",
+  "resourceProfileDesc": "Projets personnels, expérimentations et contributions publiques.",
+  "contactMailLink": "Envoyer un e-mail professionnel"
+ },
+ "it": {
+  "navSpecialties": "Specializzazioni",
+  "navHowIWork": "Come lavoro",
+  "avatarAlt": "Foto di Lucho",
+  "specialtiesTitle": "Specializzazioni",
+  "specialtiesText": "Tecnologia applicata con visione di prodotto, riproducibilità e uso responsabile.",
+  "spec1D": "Modelli predittivi, analisi avanzata, Deep Learning e visualizzazione per decisioni basate sui dati.",
+  "spec2D": "LLM, agenti di IA, automazione, valutazione e progettazione di flussi di lavoro assistiti dall'IA.",
+  "spec3D": "Pipeline, processi riproducibili, automazione, cloud e gestione operativa di soluzioni di dati.",
+  "spec4D": "Governance dei dati e dell'IA, qualità, sicurezza e cybersecurity applicate ai sistemi di intelligenza artificiale.",
+  "howiworkTitle": "Come lavoro",
+  "howiworkText": "Dal problema e dai dati a soluzioni misurabili, spiegabili e pronte all'uso.",
+  "how1T": "Modelli applicati",
+  "how1D": "Problemi di classificazione, previsione e analisi statistica con metriche e risultati facili da comunicare.",
+  "how2T": "Automazione e pipeline",
+  "how2D": "Flussi di dati riproducibili che riducono il lavoro manuale e migliorano la tracciabilità.",
+  "how3T": "Valutazione e metriche",
+  "how3D": "Monitoraggio della qualità e delle prestazioni dei modelli con metriche chiare, tracciabili e comprensibili per il business.",
+  "how4T": "Documentazione e consegna",
+  "how4D": "Deliverable chiari, documentati e pronti per la produzione, pensati perché il team possa mantenerli.",
+  "p1T": "Rilevamento di targhe e volti sull'edge (Edge AI)",
+  "p1D": "Sistema di videosorveglianza intelligente con 2 telecamere IP collegate a un DVR Dahua, con inferenza on-device su un Raspberry Pi 4 da 1 GB di RAM. Include un LLM con fine-tuning per interpretare e correggere le letture delle targhe rilevate. L'intera pipeline di visione e il modello linguistico sono ottimizzati per i limiti di memoria estremi dell'hardware.",
+  "p2T": "Classificatore di rifiuti",
+  "p2D": "Modello di Computer Vision che classifica i rifiuti per tipo di materiale per automatizzare la separazione nel processo di riciclo, addestrato su un dataset proprio. Attualmente in fase di adattamento a Raspberry Pi, per funzionare come soluzione embedded a basso costo nel punto di conferimento.",
+  "p3T": "Stima dei prezzi d'affitto — Buenos Aires e Mendoza",
+  "p3D": "Modello predittivo dei prezzi d'affitto nella Città di Buenos Aires (Argentina) e a Mendoza, con dati propri raccolti tramite scraping di Properati e ZonaProp. Integra un'analisi GIS per cogliere l'effetto della posizione (quartiere, vicinanza ai servizi, zone) sul prezzo, confrontando il comportamento del mercato immobiliare nelle due regioni.",
+  "p4T": "Rilevatore di sonnolenza",
+  "p4D": "Sistema di Computer Vision che monitora in tempo reale indicatori come la chiusura prolungata degli occhi e gli sbadigli per rilevare la sonnolenza ed emettere avvisi tempestivi, pensato per prevenire incidenti alla guida o durante l'uso di macchinari. Addestrato su un dataset proprio.",
+  "p5T": "Rilevatore di emozioni con Computer Vision",
+  "p5D": "Sistema di riconoscimento delle emozioni facciali in tempo reale da video, addestrato su un dataset proprio, che classifica gli stati emotivi per casi d'uso come l'analisi dell'esperienza utente o il monitoraggio dell'attenzione.",
+  "p6T": "Previsione del churn",
+  "p6D": "Modello di classificazione per anticipare l'abbandono dei clienti, addestrato su un dataset proprio, con particolare attenzione alla spiegabilità delle variabili più influenti, così che il team di business possa attivare azioni di fidelizzazione prima che la perdita avvenga.",
+  "p7T": "Sistema di raccomandazione per e-commerce su larga scala",
+  "p7D": "Motore di raccomandazione ibrido che combina il filtraggio collaborativo (comportamento di utenti simili) con la raccomandazione basata sui contenuti (attributi dei prodotti), addestrato su un dataset proprio e progettato per gestire grandi volumi di dati e cataloghi estesi senza perdere prestazioni né pertinenza per i nuovi utenti.",
+  "tagClass": "Classificazione",
+  "tagFace": "Riconoscimento facciale",
+  "tagImgClass": "Classificazione di immagini",
+  "tagSustain": "Sostenibilità",
+  "resourceStudentsName": "Repository per studenti",
+  "resourceStudentsDesc": "Notebook, guide ed esercizi di Data Science e Machine Learning.",
+  "resourceProfileName": "Il mio profilo GitHub",
+  "resourceProfileDesc": "Progetti personali, esperimenti e contributi pubblici.",
+  "contactMailLink": "Invia un'e-mail professionale"
+ },
+ "de": {
+  "navSpecialties": "Schwerpunkte",
+  "navHowIWork": "Arbeitsweise",
+  "avatarAlt": "Foto von Lucho",
+  "specialtiesTitle": "Schwerpunkte",
+  "specialtiesText": "Angewandte Technologie mit Produktfokus, Reproduzierbarkeit und verantwortungsvollem Einsatz.",
+  "spec1D": "Prognosemodelle, fortgeschrittene Analytik, Deep Learning und Visualisierung für datenbasierte Entscheidungen.",
+  "spec2D": "LLMs, KI-Agenten, Automatisierung, Evaluierung und Gestaltung KI-gestützter Arbeitsabläufe.",
+  "spec3D": "Pipelines, reproduzierbare Prozesse, Automatisierung, Cloud und Betrieb von Datenlösungen.",
+  "spec4D": "Daten- und KI-Governance, Qualität, Sicherheit und Cybersicherheit für Systeme der künstlichen Intelligenz.",
+  "howiworkTitle": "Arbeitsweise",
+  "howiworkText": "Vom Problem und den Daten zu messbaren, erklärbaren und einsatzbereiten Lösungen.",
+  "how1T": "Angewandte Modelle",
+  "how1D": "Klassifikations-, Prognose- und Statistikprobleme mit klaren Metriken und gut kommunizierbaren Ergebnissen.",
+  "how2T": "Automatisierung und Pipelines",
+  "how2D": "Reproduzierbare Datenflüsse, die manuelle Arbeit reduzieren und die Nachvollziehbarkeit verbessern.",
+  "how3T": "Evaluierung und Metriken",
+  "how3D": "Überwachung von Qualität und Leistung der Modelle mit klaren, nachvollziehbaren und für das Business verständlichen Metriken.",
+  "how4T": "Dokumentation und Übergabe",
+  "how4D": "Klare, dokumentierte und produktionsreife Ergebnisse, die das Team selbst warten kann.",
+  "p1T": "Kennzeichen- und Gesichtserkennung am Edge (Edge AI)",
+  "p1D": "Intelligentes Videoüberwachungssystem mit 2 IP-Kameras an einem Dahua-DVR und On-Device-Inferenz auf einem Raspberry Pi 4 mit 1 GB RAM. Ein per Fine-Tuning angepasstes LLM interpretiert und korrigiert die erkannten Kennzeichen. Die gesamte Vision-Pipeline und das Sprachmodell sind für die extremen Speichergrenzen der Hardware optimiert.",
+  "p2T": "Abfallklassifikator",
+  "p2D": "Computer-Vision-Modell, das Abfälle nach Materialart klassifiziert, um die Trennung im Recyclingprozess zu automatisieren, trainiert mit einem eigenen Datensatz. Derzeit wird es auf einen Raspberry Pi portiert, um als kostengünstige Embedded-Lösung direkt am Entsorgungsort zu arbeiten.",
+  "p3T": "Mietpreisschätzung — Buenos Aires und Mendoza",
+  "p3D": "Prognosemodell für Mietpreise in der Stadt Buenos Aires (Argentinien) und in Mendoza, mit eigenen Daten, die per Scraping von Properati und ZonaProp gewonnen wurden. Eine GIS-Analyse erfasst den Einfluss der Lage (Stadtviertel, Nähe zu Dienstleistungen, Zonen) auf den Preis und vergleicht das Verhalten des Immobilienmarkts in beiden Regionen.",
+  "p4T": "Müdigkeitserkennung",
+  "p4D": "Computer-Vision-System, das in Echtzeit Indikatoren wie längeres Schließen der Augen und Gähnen überwacht, um Müdigkeit zu erkennen und frühzeitig zu warnen – zur Unfallvermeidung beim Fahren oder beim Bedienen von Maschinen. Trainiert mit einem eigenen Datensatz.",
+  "p5T": "Emotionserkennung mit Computer Vision",
+  "p5D": "System zur Echtzeit-Erkennung von Gesichtsemotionen aus Video, trainiert mit einem eigenen Datensatz, das emotionale Zustände für Anwendungsfälle wie UX-Analyse oder Aufmerksamkeitsmonitoring klassifiziert.",
+  "p6T": "Churn-Prognose",
+  "p6D": "Klassifikationsmodell zur Vorhersage von Kundenabwanderung, trainiert mit einem eigenen Datensatz, mit Fokus auf die Erklärbarkeit der einflussreichsten Variablen, damit das Business-Team Maßnahmen zur Kundenbindung ergreifen kann, bevor der Verlust eintritt.",
+  "p7T": "Empfehlungssystem für E-Commerce im großen Maßstab",
+  "p7D": "Hybride Empfehlungs-Engine, die kollaboratives Filtern (Verhalten ähnlicher Nutzer) mit inhaltsbasierter Empfehlung (Produktattribute) kombiniert, trainiert mit einem eigenen Datensatz und ausgelegt für große Datenmengen und umfangreiche Kataloge, ohne an Leistung oder Relevanz für neue Nutzer zu verlieren.",
+  "tagClass": "Klassifikation",
+  "tagFace": "Gesichtserkennung",
+  "tagImgClass": "Bildklassifikation",
+  "tagSustain": "Nachhaltigkeit",
+  "resourceStudentsName": "Repository für Studierende",
+  "resourceStudentsDesc": "Notebooks, Leitfäden und Übungen zu Data Science und Machine Learning.",
+  "resourceProfileName": "Mein GitHub-Profil",
+  "resourceProfileDesc": "Persönliche Projekte, Experimente und öffentliche Beiträge.",
+  "contactMailLink": "Professionelle E-Mail senden"
+ }
 }
 
 // Genera las tarjetas de certificaciones según el idioma activo
@@ -1099,6 +1370,16 @@ for(let k in e){
 const el=document.getElementById(k)
 if(el)el.textContent=e[k]
 }
+
+const t=i18n[lang]||i18n.es
+document.querySelectorAll("[data-i18n]").forEach(el=>{
+const v=t[el.dataset.i18n]
+if(v!==undefined)el.textContent=v
+})
+document.querySelectorAll("[data-i18n-alt]").forEach(el=>{
+const v=t[el.dataset.i18nAlt]
+if(v!==undefined)el.alt=v
+})
 
 renderConfiguredItems(e)
 updateLanguageUrl(lang)

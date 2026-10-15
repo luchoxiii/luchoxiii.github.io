@@ -5,7 +5,9 @@
 
   var KEY = 'a11y-prefs-v1';
   var SIZES = [100, 112, 125, 150];
-  var MAIL = 'eagleblue91@gmail.com';
+  // El correo se arma en tiempo de ejecución (igual que en index.html) para que
+  // no quede en texto plano en el código fuente que leen los bots.
+  var MAIL = String.fromCharCode(101,97,103,108,101,98,108,117,101,57,49,64,103,109,97,105,108,46,99,111,109);
 
   var T = {
     es: { fab:'Accesibilidad', title:'Opciones de accesibilidad', size:'Tamaño del texto', smaller:'Reducir texto', larger:'Aumentar texto',
